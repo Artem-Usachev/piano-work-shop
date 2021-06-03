@@ -1,0 +1,21 @@
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    border-radius: 10px;
+    max-width: 447.5px;
+    max-height: 447px;
+    min-height: 235px;
+    min-width: 235px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    outline: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+}
+
+.card:hover .card__overlay {
+    background-color: rgba(22, 21, 21, 0.9);
+}

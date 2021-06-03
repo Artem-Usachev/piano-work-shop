@@ -1,0 +1,9 @@
+.video__media {
+    opacity: 0;
+}
+
+@media screen and (max-width: 1920px) {
+    .video__media {
+        opacity: 1;
+    }
+}

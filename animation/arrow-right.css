@@ -1,0 +1,13 @@
+@keyframes arrow-right {
+    0% {
+        opacity: 0.2;
+        transform: rotate(45deg) translate(5px, 10px);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: rotate(45deg) translate(10px, 5px);
+    }
+}

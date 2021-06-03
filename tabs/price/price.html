@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Матсерская Этюд</title>
+    <link rel="stylesheet" href="./pages/price.css">
+
+</head>
+
+<body class="body">
+    <!-- preloader -->
+    <div class="preloader">
+        <div class="preloader__item"></div>
+    </div>
+    <div class="page">
+        <!-- photo popup -->
+        <div class="invisible popup popup_type_photo">
+            <figure class="popup__border">
+                <img src="./" alt="/" class="popup__illustration">
+                <button type="button " class="popup__exit">
+                <img src="../../images/Close-Icon.svg" alt="закрыть " class="popup__exit-img ">
+            </button>
+                <figcaption class="popup__signature "></figcaption>
+            </figure>
+        </div>
+        <!-- popup-application -->
+        <div class="invisible popup-application popup ">
+            <div class="popup__border">
+                <button class="popup__exit" type="button">
+                <img class="popup__exit-img" src="../../images/Close-Icon.svg" alt="закрыть">
+            </button>
+                <form class="popup__content" action="send.php" method="post">
+                    <h2 class="popup__title">Оставить Заявку</h2>
+                    <div class="popup__box_name popup__box">
+                        <input type="text" class="popup__text popup__user-name" name="name" placeholder="Фамилия Имя Отчесвто" required>
+                    </div>
+                    <div class="popup__box_service popup__box">
+                        <input type="text" class="popup__text popup__user-service" name="service" placeholder="Услуга" required>
+                    </div>
+                    <div class="popup__box_telephone popup__box">
+                        <input type="text" class="popup__text popup__user-telephone" name="telephone" placeholder="Номер телефона" required>
+                    </div>
+                    <button class="popup__button " type="submit">Отправить</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- header -->
+        <header class="header">
+            <div class="header__overflou">
+                <!-- строчка с меню -->
+                <div class="header__bar">
+                    <img class="header__logo" src="../../images/logo.svg" alt="лого">
+                    <img class="header__nav" src="../../images/menu-icon.png" alt="меню">
+                </div>
+                <!-- всплывающее меню -->
+                <nav class="invisible menu ">
+
+                    <div class="menu__border">
+                        <img class="menu__exit" alt="закрыть" src="../../images/exit.svg">
+                        <ul class="menu__body">
+                            <li>
+                                <a href="../../index.html" class="menu__link" id="menu__link">Главная</a>
+                            </li>
+                            <li>
+                                <p class="menu__link menu__link-application" id="menu__link">Оставить заявку</p>
+                            </li>
+
+                            <li>
+                                <a href="../price/price.html" class="menu__link" id="menu__link">Услуги и Цены</a>
+                            </li>
+                            <li>
+                                <a href="../works/works.html" class="menu__link" id="menu__link">Работы</a>
+                            </li>
+                            <li>
+                                <a href="./useful-information.html" class="menu__link" id="menu__link">Полезная информация</a>
+                            </li>
+                            <li>
+                                <a href="#footer" class="menu__link menu__link-type-contacts" id="menu__link">Контакты</a>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                </nav>
+            </div>
+        </header>
+        <div class="content">
+            <div class="content__box">
+                <h1 class=" content__title">Услуги и цены</h1>
+            </div>
+            <section class="article">
+                <h2 class="article__title"> Настройка</h2>
+                <ul class="article__subtitle">
+                    <li>Настройка пианино/рояль: 2500/3000.р</li>
+                    <li>Настройка пианино или рояля с поднятием строя на четверть тона/полутон/тон, или полное восстановление строя: + 500/1000/1500.р</li>
+                </ul>
+            </section>
+            <section class="article">
+                <h2 class="article__title">Регулировка </h2>
+                <ul class="article__subtitle">
+                    <li>Установка на уровень клавиатуры пианино (ровная клавиатура): 2400.р</li>
+                    <li>Установка на уровень клавиатуры рояля (ровная клавиатура): 3200.р</li>
+                    <li>Регулировка друка клавиатуры (глубина нажатия клавиш): 1600.р</li>
+                    <li>Частичная регулировка простой механики пианино или рояля с устранением мелких дефектов: 4800.р</li>
+                    <li> Частичная регулировка механики рояля двойной репетиции с устранением мелких дефектов: 5200.р</li>
+                    <li>Полная регулировка простой механики пианино или рояля: 8000.р</li>
+                    <li>Полная регулировка механики рояля двойной репетиции: 12000.р</ul>
+            </section>
+            <section class="article">
+                <h2 class="article__title">Ремонт </h2>
+                <ul class="article__subtitle">
+                    <li>Замена струны: 500.р</li>
+                    <li>Замена вирбеля (колка): 150.р</li>
+                    <li>Крупный ремонт, проклейка деталей инструмента, корпуса, проклейкаи зареивание трещин в деке инструмента: при осмотре</li>
+                </ul>
+            </section>
+            <section class="article">
+                <h2 class="article__title">Полировка и покраска </h2>
+                <ul class="article__subtitle">
+                    <li>Полировка лакокрасочного покрытия: 5000.р</li>
+                    <li>Покраска в зависимости от типа работ и способа покраски: от 25000.р</li>
+                </ul>
+            </section>
+            <section class="article">
+                <h2 class="article__title">Перевозка и Осмотр </h2>
+                <ul class="article__subtitle">
+                    <li>Перевозка инструмента: 2500.р</li>
+                    <li>Выезд на осмотр/оценку инструмента: 1000.р/шт</li>
+                </ul>
+            </section>
+        </div>
+        <!-- подвал -->
+        <div class="footer__line"></div>
+
+        <footer class="footer" id="footer">
+
+            <div class="footer__text-box">
+                <h2 class="footer__title">Свяжитесь с Нами</h2>
+                <p class="footer__subtitle">Вы можете задать вопросы и заказать услуги<br>по телефону, почте или в наших соцсетях</p>
+                <p class="footer__author">&#169 Этюд Фортепианная Мастерская</p>
+            </div>
+            <ul class="footer__links">
+                <li class="footer__link-place">
+                    <p class="footer__number">+79122120680</p>
+                </li>
+                <li class="footer__link-place">
+                    <p class="footer__mail">masterskayia-etud@yandex.ru</p>
+                </li>
+
+                <li class="footer__link-place">
+                    <ul class="footer__soshial">
+                        <li class="footer__link-place">
+                            <a class="footer__link" href="https://vk.com/pavelpianotuning" target="_blank" rel="noopener">
+                                <img class="footer__link-image" src="../../images/vk.svg" alt="ВК">
+                            </a>
+                        </li>
+                        <li class="footer__link-place">
+                            <a class="footer__link" href="https://www.instagram.com/pavel_kruchinskii/" target="_blank" rel="noopener">
+                                <img class="footer__link-image" src="../../images/insta.svg" alt="Инстаграм">
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </footer>
+
+    </div>
+    <script type="module" src="./pages/price.js"></script>
+</body>
+
+</html>

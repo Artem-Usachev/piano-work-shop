@@ -1,0 +1,31 @@
+.company__master {
+    grid-area: text-block-master;
+    width: 50%;
+    padding-left: 187px;
+}
+
+@media screen and (max-width: 1439px) {
+    .company__master {
+        padding-left: 121px;
+    }
+}
+
+@media screen and (max-width: 1279px) {
+    .company__master {
+        padding-left: 97px;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .company__master {
+        padding-left: 72px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .company__master {
+        width: 100%;
+        padding-left: 0;
+        text-align: center;
+    }
+}

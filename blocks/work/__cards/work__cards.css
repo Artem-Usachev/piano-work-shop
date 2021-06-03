@@ -1,0 +1,43 @@
+.work__cards {
+    display: flex;
+    max-width: 1244px;
+    margin: 0;
+    padding: 0;
+    transition: 2.5s;
+}
+
+@media screen and (max-width: 1439px) {
+    .work__cards {
+        max-width: 828px;
+    }
+}
+
+@media screen and (max-width: 1279px) {
+    .work__cards {
+        max-width: 867px;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .work__cards {
+        max-width: 599px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .work__cards {
+        max-width: 520px;
+    }
+}
+
+@media screen and (max-width: 676px) {
+    .work__cards {
+        max-width: 220px;
+    }
+}
+
+@media screen and (max-width: 424px) {
+    .work__cards {
+        max-width: 220px;
+    }
+}

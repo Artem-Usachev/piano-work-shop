@@ -1,0 +1,8 @@
+.page {
+    margin: 0 auto;
+    font-family: Raleway;
+    min-width: 320px;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(49, 43, 43);
+}

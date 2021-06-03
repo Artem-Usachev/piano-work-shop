@@ -1,0 +1,31 @@
+.footer__soshial {
+    display: flex;
+    list-style-type: none;
+    padding: 30px 0 0;
+    justify-content: flex-start;
+}
+
+@media screen and (max-width: 1439px) {
+    .footer__soshial {
+        padding: 25px 0 0;
+    }
+}
+
+@media screen and (max-width: 1279px) {
+    .footer__soshial {
+        padding: 20px 0 0;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .footer__soshial {
+        padding: 15px 0 0;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .footer__soshial {
+        padding: 10px 0 0;
+        justify-content: center;
+    }
+}

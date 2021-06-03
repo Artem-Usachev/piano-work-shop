@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Матсерская Этюд</title>
+    <link rel="stylesheet" href="./pages/etud.css">
+
+</head>
+
+<body class="body">
+    <!-- preloader -->
+    <div class="preloader">
+        <div class="preloader__item"></div>
+    </div>
+    <div class="page">
+        <!-- popup-application -->
+        <div class="popup-application popup invisible">
+            <div class="popup__border">
+                <button class="popup__exit" type="button">
+                    <img class="popup__exit-img" src="./images/Close-Icon.svg" alt="закрыть">
+                </button>
+                <form class="popup__content">
+                    <h2 class="popup__title">Оставить Заявку</h2>
+                    <div class="popup__box_name popup__box">
+                        <input type="text" class="popup__text popup__user-name" name="name" placeholder="Фамилия Имя Отчесвто" required>
+                    </div>
+                    <div class="popup__box_service popup__box">
+                        <input type="text" class="popup__text popup__user-service" name="service" placeholder="Услуга" required>
+                    </div>
+                    <div class="popup__box_telephone popup__box">
+                        <input type="text" class="popup__text popup__user-telephone" name="telephone" placeholder="Номер телефона" required>
+                    </div>
+                    <button class="popup__button" type="submit">Отправить</button>
+                </form>
+            </div>
+        </div>
+        <header class="header">
+            <!-- строчка с меню -->
+            <div class="header__bar">
+                <img class="header__logo" src="./images/logo.svg" alt="лого">
+                <h1>Контакты</h1>
+                <nav class="header__nav">
+                    <img class="menu" src="./images/menu-icon.png" alt="меню">
+                </nav>
+            </div>
+        </header>
+        <nav class="menu__sidebar menu__sidebar_hidden">
+            <img class="menu__exit" alt="закрыть" src="../../images/exit.svg">
+            <ul class="menu__body">
+                <li>
+                    <a href="../../index.html" class="menu__link" id="menu__link">Главная</a>
+                </li>
+                <li>
+                    <a href="#" class="menu__link menu__link-application" id="menu__link">Оставить заявку</a>
+                </li>
+
+                <li>
+                    <a href="../price/price.html" class="menu__link" id="menu__link">Услуги и Цены</a>
+                </li>
+                <li>
+                    <a href="../aboutUs/aboutUs.html" class="menu__link" id="menu__link">О Нас</a>
+
+                </li>
+                <li>
+                    <a href="../contacts/contacts.html" class="menu__link" id="menu__link">Контакты</a>
+                </li>
+                <li>
+                    <a href="../works/works.html" class="menu__link" id="menu__link">Полезная информация</a>
+
+                </li>
+            </ul>
+        </nav>
+        <script src="./scripts/script.js"></script>
+</body>
+
+</html>

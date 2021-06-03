@@ -1,0 +1,42 @@
+.arrow_posishion_left {
+    left: 72px;
+    display: block;
+    width: 25px;
+    height: 25px;
+    border-bottom: 2px solid #312B2B;
+    border-left: 2px solid #312B2B;
+    animation: arrow-left 2s infinite;
+    z-index: 5;
+    transform: rotate(45deg);
+    margin: 0 auto;
+    z-index: 5;
+    position: absolute;
+    top: 59%;
+}
+
+@media screen and (max-width: 1279px) {
+    .arrow_posishion_left {
+        width: 20px;
+        height: 20px;
+        left: 26px;
+        top: 56.5%;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .arrow_posishion_left {
+        width: 15px;
+        height: 15px;
+        left: 30px;
+        top: 62%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .arrow_posishion_left {
+        width: 10px;
+        height: 10px;
+        left: 25px;
+        top: 41%;
+    }
+}

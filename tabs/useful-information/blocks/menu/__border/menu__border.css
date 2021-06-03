@@ -1,0 +1,22 @@
+.menu__border {
+    width: 350px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    background-color: rgb(20, 19, 19);
+    list-style-type: none;
+    transition: 1s ease all;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-left: 1px #a1a4a4 solid;
+}
+
+@media screen and (max-width: 767px) {
+    .menu__border {
+        width: 100%;
+        border: none
+    }
+}

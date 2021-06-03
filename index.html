@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мастерская Этюд</title>
+    <link rel="stylesheet" href="./pages/index.css">
+
+</head>
+
+<body class="body">
+    <!-- preloader -->
+    <div class="preloader">
+        <div class="preloader__item"></div>
+    </div>
+    <div class="page">
+        <!-- photo popup -->
+        <div class="invisible popup popup_type_photo">
+            <figure class="popup__border">
+                <img src="./" alt="/" class="popup__illustration">
+                <button type="button " class="popup__exit">
+                    <img src="./images/Close-Icon.svg" alt="закрыть " class="popup__exit-img ">
+                </button>
+                <figcaption class="popup__signature "></figcaption>
+            </figure>
+        </div>
+        <!-- popup-application -->
+        <div class="popup-application popup invisible">
+            <div class="popup__border">
+                <button class="popup__exit" type="button">
+                    <img class="popup__exit-img" src="./images/Close-Icon.svg" alt="закрыть">
+                </button>
+                <form class="popup__content" action="send.php" method="post">
+                    <h2 class="popup__title">Оставить Заявку</h2>
+                    <div class="popup__box_name popup__box">
+                        <input type="text" class="popup__text popup__user-name" name="name" placeholder="Фамилия Имя Отчесвто" required>
+                    </div>
+                    <div class="popup__box_service popup__box">
+                        <input type="text" class="popup__text popup__user-service" name="service" placeholder="Услуга" required>
+                    </div>
+                    <div class="popup__box_telephone popup__box">
+                        <input type="text" class="popup__text popup__user-telephone" name="telephone" placeholder="Номер телефона" required>
+                    </div>
+                    <button class="popup__button " type="submit">Отправить</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- header -->
+        <header class="header">
+            <div class="video">
+                <video class="video__media" src="./video/header__video.mp4" autoplay muted loop></video>
+            </div>
+            <div class="header__content">
+                <!-- строчка с меню -->
+                <div class="header__bar">
+                    <img class="header__logo" src="./images/logo.svg" alt="лого">
+                    <img class="header__nav" src="./images/menu-icon.png" alt="меню">
+                </div>
+                <!-- всплывающее меню -->
+                <nav class="menu invisible">
+
+                    <div class="menu__border">
+                        <img class="menu__exit" alt="закрыть" src="./images/exit.svg">
+                        <ul class="menu__body">
+                            <li>
+                                <a href="./index.html" class="menu__link">Главная</a>
+                            </li>
+                            <li>
+                                <p class="menu__link menu__link-application">Оставить заявку</p>
+                            </li>
+
+                            <li>
+                                <a href="./tabs/price/price.html" class="menu__link">Услуги и Цены</a>
+                            </li>
+                            <li>
+                                <a href="./tabs/works/works.html" class="menu__link">Работы</a>
+                            </li>
+                            <li>
+                                <a href="./tabs/useful-information/useful-information.html" class="menu__link">Полезная информация</a>
+                            </li>
+                            <li>
+                                <a href="#footer" class="menu__link menu__link-type-contacts">Контакты</a>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                </nav>
+
+                <!-- заголовки -->
+                <div class="header__text">
+                    <h1 class="header__title">Фортепианная Мастерская</h1>
+                    <p class="header__subtitle">Ремонт Регулировка Настройка</p>
+                </div>
+                <!-- стрелка вниз -->
+                <div class="arrow-down">
+                    <span class="arrow-down__item"></span>
+                    <span class="arrow-down__item"></span>
+                    <span class="arrow-down__item"></span>
+                </div>
+            </div>
+        </header>
+        <!-- content -->
+        <div class="content">
+            <!-- о нас -->
+            <section class="company" id="company">
+                <div class="company__box">
+                    <h2 class="company__main-title">О Мастерской</h2>
+                </div>
+                <div class="company__about">
+                    <h3 class="company__title">Забота о вашем инструменте</h3>
+                    <p class="company__subtitle">Мастерская основана в 2017 году как частный проэкт фортепианного мастера, для спасения инструментов Свердловской области.
+                    </p>
+                </div>
+                <div class="company__master">
+                    <h3 class="company__title"> Мастер - Павел Кручинский</h3>
+                    <p class="company__subtitle">Удостоверение настройщика пианино и роялей<br>Ученик Школы Квинта 2, Порвенкова В.Г. Федоров В.В. Ассоциации фортепианных мастеров России<br> Опыт Работы с 2012 года</p>
+                </div>
+            </section>
+            <!-- services -->
+            <section class="services" id="services">
+                <div class="popup invisible popup-settings">
+                    <div class="popup__border">
+                        <button class="popup__exit" type="button">
+                            <img class="popup__exit-img popup__exit-img-settings" src="./images/Close-Icon.svg" alt="закрыть">
+                        </button>
+                        <div class="popup__content">
+                            <h2 class="popup__title">Настройка</h2>
+                            <p class="popup__subtitle">Класическая темперация 435 -442герц.</p>
+                            <a href="./tabs/price/price.html"><button class="popup__button popup__button_condition_active" type="button">
+                                Подробнее</button></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup invisible popup-repair">
+                    <div class="popup__border">
+                        <button class="popup__exit" type="button">
+                            <img class="popup__exit-img popup__exit-img-repair" src="./images/Close-Icon.svg" alt="закрыть">
+                        </button>
+                        <div class="popup__content">
+                            <h2 class="popup__title">Ремонт</h2>
+                            <p class="popup__subtitle">Ремонт инструмента до полного работоспособного состояния с возможной заменой элементов.</p>
+                            <a href="./tabs/price/price.html"><button class="popup__button popup__button_condition_active" type="button">
+                                    Подробнее</button></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup invisible popup-transportation">
+                    <div class="popup__border">
+                        <button class="popup__exit" type="button">
+                            <img class="popup__exit-img popup__exit-img-transportation" src="./images/Close-Icon.svg" alt="закрыть">
+                        </button>
+                        <div class="popup__content">
+                            <h2 class="popup__title">Перевозка Инструмента</h2>
+                            <p class="popup__subtitle">Акуратная перевозка проверенными профессиональными грузчиками, занимающиеся делом вот уже много лет.</p>
+                            <a href="./tabs/price/price.html"><button class="popup__button popup__button_condition_active" type="button">
+                                    Подробнее</button></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup invisible popup-diagnostics">
+                    <div class="popup__border">
+                        <button class="popup__exit" type="button">
+                            <img class="popup__exit-img popup__exit-img-diagnostics" src="./images/Close-Icon.svg" alt="закрыть">
+                        </button>
+                        <div class="popup__content">
+                            <h2 class="popup__title">Диагностика</h2>
+                            <p class="popup__subtitle">Оценка инструмента по всем пунктам для дальнейшего восстановления</p>
+                            <a href="./tabs/price/price.html"><button class="popup__button popup__button_condition_active" type="button">
+                                    Подробнее</button></a>
+                        </div>
+                    </div>
+                </div>
+                <h2 class="services__title">Услуги</h2>
+                <div class="services__cards">
+                    <div class="card card-settings">
+                        <div class="card__overlay"></div>
+                        <p class="card__text">Настройка<br> Инструмента</p>
+                    </div>
+                    <div class="card card-repair">
+                        <div class="card__overlay"></div>
+                        <p class="card__text">Ремонт<br> Инструмента</p>
+                    </div>
+                    <div class="card card-transportation">
+                        <div class="card__overlay"></div>
+                        <p class="card__text">Перевозка<br> Инструмента</p>
+                    </div>
+                    <div class="card card-diagnostics">
+                        <div class="card__overlay"></div>
+                        <p class="card__text ">Диагностика<br> Инструмента</p>
+                    </div>
+                </div>
+            </section>
+            <!-- работы -->
+            <section class="work">
+                <h2 class="work__title">Работы</h2>
+                <div class="arrow  arrow_posishion_right"></div>
+                <div class="arrow  arrow_posishion_left"></div>
+                <div class="work__border">
+                    <ul class="work__cards">
+                        <li class="work__card work__card-change">
+                            <img class="work__illustrasion" alt="Настройка инструмента" src="./images/1.jpg">
+                            <div class="work__text">
+                                <h3 class="work__text-title">Настройка инструмента</h3>
+                            </div>
+                        </li>
+                        <li class="work__card">
+                            <img class="work__illustrasion" alt="Ремонт инструмента" src="./images/2.jpg">
+                            <div class="work__text">
+                                <h3 class="work__text-title">Ремонт инструмента</h3>
+                            </div>
+                        </li>
+                        <li class="work__card">
+                            <img class="work__illustrasion" alt="Устранение износа и замена элементов" src="./images/3.jpg">
+                            <div class="work__text">
+                                <h3 class="work__text-title">Устранение износа и замена элементов</h3>
+                            </div>
+                        </li>
+                        <li class="work__card">
+                            <img class="work__illustrasion" alt="Замена порченного молью фетра" src="./images/4.jpg">
+                            <div class="work__text">
+                                <h3 class="work__text-title">Замена порченного молью фетра</h3>
+                            </div>
+                        </li>
+                        <li class="work__card">
+                            <img class="work__illustrasion" alt="Полировка или покраска" src="./images/5.jpg">
+                            <div class="work__text">
+                                <h3 class="work__text-title">Полировка и покраска</h3>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!-- подвал -->
+            <footer class="footer" id="footer">
+                <div class="footer__text-box">
+                    <h2 class="footer__title">Свяжитесь с Нами</h2>
+                    <p class="footer__subtitle">Вы можете задать вопросы и заказать услуги<br>по телефону, почте или в наших соцсетях</p>
+                    <p class="footer__author">&#169 Этюд Фортепианная Мастерская</p>
+                </div>
+                <ul class="footer__links">
+                    <li class="footer__link-place">
+                        <p class="footer__number">+79122120680</p>
+                    </li>
+                    <li class="footer__link-place">
+                        <p class="footer__mail">masterskayia-etud@yandex.ru</p>
+                    </li>
+
+                    <li class="footer__link-place">
+                        <ul class="footer__soshial">
+                            <li class="footer__link-place">
+                                <a class="footer__link" href="https://vk.com/pavelpianotuning" target="_blank" rel="noopener">
+                                    <img class="footer__link-image" src="./images/vk.svg" alt="ВК">
+                                </a>
+                            </li>
+                            <li class="footer__link-place">
+                                <a class="footer__link" href="https://www.instagram.com/pavel_kruchinskii/" target="_blank" rel="noopener">
+                                    <img class="footer__link-image" src="./images/insta.svg" alt="Инстаграм">
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </footer>
+        </div>
+    </div>
+    <script src="./pages/index.js" type="module"></script>
+</body>
+
+</html>

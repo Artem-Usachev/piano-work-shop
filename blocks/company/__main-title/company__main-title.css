@@ -1,0 +1,41 @@
+.company__main-title {
+    font-weight: bold;
+    font-size: 68px;
+    line-height: 113px;
+    margin: 0;
+}
+
+@media screen and (max-width: 1439px) {
+    .company__main-title {
+        font-size: 50px;
+        line-height: 75px;
+    }
+}
+
+@media screen and (max-width: 1279px) {
+    .company__main-title {
+        font-size: 48px;
+        line-height: 55px;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .company__main-title {
+        font-size: 64px;
+        line-height: 75px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .company__main-title {
+        font-size: 53px;
+        line-height: 62px;
+    }
+}
+
+@media screen and (max-width: 424px) {
+    .company__main-title {
+        padding-left: 27px;
+        font-size: 36px;
+    }
+}

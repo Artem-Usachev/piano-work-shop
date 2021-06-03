@@ -1,0 +1,13 @@
+.header__overflou {
+    background-image: url("../../../../../images/header-background.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    height: 80px;
+    width: 100%;
+}

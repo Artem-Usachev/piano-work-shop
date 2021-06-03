@@ -1,0 +1,6 @@
+.work__text {
+    grid-area: text;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}

@@ -1,0 +1,26 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    max-height: 100vh;
+    overflow: hidden;
+    position: relative;
+    background: url("../../images/header-background.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: white;
+}
+
+.header::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(39, 35, 35, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}

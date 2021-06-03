@@ -1,0 +1,6 @@
+.preloader__item {
+    width: 100px;
+    height: 100px;
+    background-image: url(../../../../images/preloader.svg);
+    animation: preloader-rotate 5s infinite linear;
+}
