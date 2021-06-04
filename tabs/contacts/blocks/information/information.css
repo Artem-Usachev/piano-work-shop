@@ -1,0 +1,13 @@
+.information {
+    color: #fdfdfd;
+    padding: 50px 50px 0px;
+    display: flex;
+    position: relative;
+    margin-bottom: 74px;
+}
+
+@media screen and (max-width: 1024px) {
+    .information {
+        padding: 30px 30px 0px;
+    }
+}

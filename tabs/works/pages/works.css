@@ -84,3 +84,7 @@
 @import url(../blocks/work/__illustration/work__illustration.css);
 @import url(../blocks/work/__illustration/_big/work__illustration_big.css);
 @import url(../blocks/works/works.css);
+
+/* line */
+
+@import url(../blocks/line/line.css);

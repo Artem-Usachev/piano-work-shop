@@ -121,3 +121,7 @@ const workImg = document.querySelectorAll('.work__illustrasion');
 workImg.forEach((img) => {
     img.addEventListener('click', (e) => popupPhoto.open(e))
 })
+const footerOpenPopuBtn = document.querySelector('.footer__title')
+footerOpenPopuBtn.addEventListener('click', () =>
+    popupAplication.open()
+)

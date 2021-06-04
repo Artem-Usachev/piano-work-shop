@@ -3,4 +3,7 @@
     height: 1px;
     margin-top: 30px;
     background-color: white;
+    position: absolute;
+    bottom: 60px;
+    left: 0;
 }

@@ -29,3 +29,7 @@ const popupPhotoSignature = document.querySelector('.popup__signature')
 const popupPhotoImg = document.querySelector('.popup__illustration')
 const popupPhoto = new PopupWithImage(popupPhotoSelector, popupPhotoImg, popupPhotoSignature)
 popupPhoto.setEventListeners()
+const footerOpenPopuBtn = document.querySelector('.footer__title')
+footerOpenPopuBtn.addEventListener('click', () =>
+    popupAplication.open()
+)

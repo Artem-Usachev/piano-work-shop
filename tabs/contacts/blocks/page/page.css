@@ -1,0 +1,16 @@
+.page {
+    margin: 0 auto;
+    font-family: Raleway;
+    min-width: 320px;
+    min-height: 100vh;
+    position: relative;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(49, 43, 43);
+}
+
+a {
+    outline: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+}

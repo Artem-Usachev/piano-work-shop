@@ -1,0 +1,10 @@
+.information__link {
+    width: 50px;
+    height: 50px;
+    transition: 1s ease all;
+}
+
+.information__link:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}

@@ -1,0 +1,6 @@
+.information__text-box {
+    margin: 0;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+}

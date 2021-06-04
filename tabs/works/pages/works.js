@@ -85,3 +85,7 @@ sectionTransportation.render()
 const sectionCleaning = new Section({ items: initialCardsCleaning, renderer: (data) => addNewCard(data, sectionCleaning) },
     '.works_type_cleaning')
 sectionCleaning.render()
+const footerOpenPopuBtn = document.querySelector('.footer__title')
+footerOpenPopuBtn.addEventListener('click', () =>
+    popupAplication.open()
+)

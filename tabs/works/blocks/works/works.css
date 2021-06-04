@@ -1,7 +1,6 @@
  .works {
      display: grid;
      grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
-     padding: 5px 50px 0;
      column-gap: 17px;
      margin-top: 30px;
      row-gap: 20px;
@@ -16,30 +15,13 @@
  
  @media screen and (max-width: 1023px) {
      .works {
-         padding: 10px 30px 0;
-         width: calc(100% - 2* 30px);
          column-gap: 10px;
          row-gap: 12px;
-     }
- }
- 
- @media screen and (max-width: 768px) {
-     .works {
-         width: calc(100% - 2* 20px);
      }
  }
  
  @media screen and (max-width: 426px) {
      .works {
          row-gap: 20px;
-         padding: 12px 14px 0;
-         width: calc(100% - 2* 14px);
-     }
- }
- 
- @media screen and (max-width: 320px) {
-     .works {
-         padding: 16px 15px 0;
-         width: calc(100% - 2* 15px);
      }
  }

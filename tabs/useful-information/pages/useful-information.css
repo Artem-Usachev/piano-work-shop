@@ -39,7 +39,6 @@
 @import url(../blocks/footer/__text-box/footer__text-box.css);
 @import url(../blocks/footer/__soshial/footer__soshial.css);
 @import url(../blocks/footer/__author/footer__author.css);
-@import url(../blocks/footer/__line/footer__line.css);
 
 /* header */
 
@@ -75,3 +74,15 @@
 /* preloader */
 
 @import url(../blocks/preloader/preloader.css);
+
+/* article */
+
+@import url(../blocks/article/article.css);
+@import url(../blocks/article/__section/article__section.css);
+@import url(../blocks/article/__subtitle/article__subtitle.css);
+@import url(../blocks/article/__text-title/article__text-title.css);
+@import url(../blocks/article/__title/article__title.css);
+
+/* line */
+
+@import url(../blocks/line/line.css);

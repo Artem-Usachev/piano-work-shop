@@ -1,0 +1,23 @@
+.information__title {
+    font-size: 28px;
+    font-weight: 300;
+    margin: 0 0 30px;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 1px;
+    transition: background-size 2s;
+    cursor: pointer;
+    outline: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+}
+
+.information__title:hover {
+    background-size: 100% 1px;
+    opacity: 0.8;
+}
+
+.information__title:active {
+    background-size: 100% 1px;
+}
