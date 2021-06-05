@@ -18,15 +18,15 @@ export class PopupWithForm extends Popup {
             this.submitButton.textContent = 'Сохранено!';
         }
     };
-    setEventListeners() {
-        super.setEventListeners();
-        this.submitForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            this.close()
-        });
-    }
-    close() {
-        this._reset();
-        super.close();
-    }
+    // setEventListeners() {
+    //     super.setEventListeners();
+    //     this.submitForm.addEventListener('submit', (e) => {
+    //         e.preventDefault();
+    //         this.close()
+    //     });
+    // }
+    // close() {
+    //     this._reset();
+    //     super.close();
+    // }
 }

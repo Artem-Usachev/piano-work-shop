@@ -82,7 +82,7 @@ window.addEventListener('scroll', (e) => {
 })
 const popupAplicationSelector = document.querySelector('.popup-application')
 const popupAplication = new PopupWithForm({ popup: popupAplicationSelector })
-popupAplication.setEventListeners()
+    // popupAplication.setEventListeners()
 const menuSelector = document.querySelector('.menu');
 const menuVisible = new Menu({
     selector: menuSelector,
