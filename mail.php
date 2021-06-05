@@ -14,8 +14,9 @@ $mail->isSMTP();                                      // Set mailer to use SMTP
 $mail->Host = 'smtp.yandex.ru';  																							// Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
 $mail->Username = 'etud.server@yandex.ru'; // Ваш логин от почты с которой будут отправляться письма
-$mail->Password = 'KEQ-tqA-2Mw-key'; // Ваш пароль от почты с которой будут отправляться письма                            // Enable TLS encryption, `ssl` also accepted
-$mail->Port = 25; // TCP port to connect to / этот порт может отличаться у других провайдеров
+$mail->Password = 'KEQ-tqA-2Mw-key'; // Ваш пароль от почты с которой будут отправляться письма 
+$mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
+$mail->Port = 465; // TCP port to connect to / этот порт может отличаться у других провайдеров
 
 $mail->setFrom('etud.server@yandex.ru'); // от кого будет уходить письмо?
 $mail->addAddress('masterskayia-etud@yandex.ru');     // Кому будет уходить письмо 
@@ -33,5 +34,7 @@ $mail->AltBody = '';
 
 if(!$mail->send()) {
     echo 'Error';
+} else {
+    header('location: thank-you.html');
 }
 ?>
