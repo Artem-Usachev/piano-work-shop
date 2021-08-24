@@ -1,10 +1,8 @@
 .work__title {
     margin: 25px 0 31px;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
     font-weight: 900;
     font-size: 20px;
+    min-height: 87px;
     line-height: 29px;
 }
 
@@ -12,6 +10,7 @@
     .work__title {
         font-size: 19px;
         line-height: 23px;
+        min-height: 80px;
         margin-top: 20px;
         margin-bottom: 25px;
     }
@@ -20,6 +19,7 @@
 @media screen and (max-width: 1023px) {
     .work__title {
         font-size: 14px;
+        min-height: 51px;
         line-height: 17px;
         margin-top: 15px;
         margin-bottom: 19px;
@@ -28,7 +28,7 @@
 
 @media screen and (max-width: 767px) {
     .work__title {
-        font-size: 24px;
+        font-size: 20px;
         line-height: 29px;
         margin-top: 25px;
         margin-bottom: 25px;

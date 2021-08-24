@@ -21,10 +21,6 @@ export const initialCardsKeyboard = [{
 ];
 export const initalCardsPegs = [{
         name: 'Замена колков (вирбелей)',
-        link: 'https://thumb.cloud.mail.ru/weblink/thumb/xw1/kgbC/nMs53J1AB/Работы/Колки/1.jpg'
-    },
-    {
-        name: 'Замена колков (вирбелей)',
         link: 'https://thumb.cloud.mail.ru/weblink/thumb/xw1/kgbC/nMs53J1AB/Работы/Колки/11.jpg'
     },
     {
@@ -35,14 +31,6 @@ export const initalCardsPegs = [{
 
 
 export const initalCardsMechanics = [{
-        name: 'Замена изношенной гарнировки клавиатуры',
-        link: 'https://thumb.cloud.mail.ru/weblink/thumb/xw1/kgbC/nMs53J1AB/Работы/Механика/1.jpg'
-    },
-    {
-        name: 'Шлифовка молотков',
-        link: 'https://thumb.cloud.mail.ru/weblink/thumb/xw1/kgbC/nMs53J1AB/Работы/Механика/2.jpg'
-    },
-    {
         name: 'Замена молотков',
         link: 'https://thumb.cloud.mail.ru/weblink/thumb/xw1/kgbC/nMs53J1AB/Работы/Механика/3.jpg'
     },
@@ -51,15 +39,7 @@ export const initalCardsMechanics = [{
         link: 'https://thumb.cloud.mail.ru/weblink/thumb/xw1/kgbC/nMs53J1AB/Работы/Механика/4.jpg'
     },
     {
-        name: 'Ремонт или замена узлов механики',
-        link: 'https://thumb.cloud.mail.ru/weblink/thumb/xw1/kgbC/nMs53J1AB/Работы/Механика/11.jpg'
-    },
-    {
-        name: 'Ремонт или замена узлов механики',
-        link: 'https://thumb.cloud.mail.ru/weblink/thumb/xw1/kgbC/nMs53J1AB/Работы/Механика/111.jpg'
-    },
-    {
-        name: 'Ремонт или замена узлов механики',
+        name: 'Шлифовка молотков',
         link: 'https://thumb.cloud.mail.ru/weblink/thumb/xw1/kgbC/nMs53J1AB/Работы/Механика/222.jpg'
     },
     {
@@ -69,6 +49,18 @@ export const initalCardsMechanics = [{
     {
         name: 'Ремонт или замена узлов механики',
         link: 'https://thumb.cloud.mail.ru/weblink/thumb/xw1/kgbC/nMs53J1AB/Работы/Механика/11111.jpg'
+    },
+    {
+        name: 'Регулировка механики пианино и рояля',
+        link: 'https://thumb.cloud.mail.ru/weblink/thumb/xw1/kgbC/nMs53J1AB/Работы/Регулировка%20механики/11.jpg'
+    },
+    {
+        name: 'Регулировка механики пианино и рояля',
+        link: 'https://thumb.cloud.mail.ru/weblink/thumb/xw1/kgbC/nMs53J1AB/Работы/Регулировка%20механики/111.jpg'
+    },
+    {
+        name: 'Регулировка механики пианино и рояля',
+        link: 'https://thumb.cloud.mail.ru/weblink/thumb/xw1/kgbC/nMs53J1AB/Работы/Регулировка%20механики/1111.jpg'
     }
 ];
 export const initalCardsPainting = [{
@@ -128,10 +120,6 @@ export const initalCardsRepair = [{
     },
     {
         name: 'Работы по укреплению корпуса, резонаторного щита и других элементов',
-        link: 'https://thumb.cloud.mail.ru/weblink/thumb/xw1/kgbC/nMs53J1AB/Работы/Ремонт/111.jpg'
-    },
-    {
-        name: 'Работы по укреплению корпуса, резонаторного щита и других элементов',
         link: 'https://thumb.cloud.mail.ru/weblink/thumb/xw1/kgbC/nMs53J1AB/Работы/Ремонт/1111.jpg'
     }
 ];
@@ -144,10 +132,6 @@ export const initalCardsTransportation = [{
     link: 'https://thumb.cloud.mail.ru/weblink/thumb/xw1/kgbC/nMs53J1AB/Работы/Транспортировка/1.jpg'
 }];
 export const initialCardsCleaning = [{
-        name: 'Полная чистка инструмента',
-        link: 'https://thumb.cloud.mail.ru/weblink/thumb/xw1/kgbC/nMs53J1AB/Работы/Чистка/1.jpg'
-    },
-    {
         name: 'Полная чистка инструмента',
         link: 'https://thumb.cloud.mail.ru/weblink/thumb/xw1/kgbC/nMs53J1AB/Работы/Чистка/11.jpg'
     },
