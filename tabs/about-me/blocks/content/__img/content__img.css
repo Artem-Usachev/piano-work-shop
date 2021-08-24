@@ -1,6 +1,7 @@
 .content__img {
     border-radius: 5px;
     min-width: 225px;
+    width: 100%;
     max-width: 400px;
     border: 1px solid white;
 }
