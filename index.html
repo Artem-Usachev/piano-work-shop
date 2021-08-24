@@ -7,7 +7,15 @@
     <title>Мастерская Этюд</title>
     <link rel="icon" href="./images/site-icon.png" type="png">
     <link rel="stylesheet" href="./pages/index.css">
+    <!-- Put this script tag to the <head> of your page -->
+    <script type="text/javascript" src="https://vk.com/js/api/openapi.js?169"></script>
 
+    <script type="text/javascript">
+        VK.init({
+            apiId: API_ID,
+            onlyWidgets: true
+        });
+    </script>
 </head>
 
 <body class="body">
@@ -253,6 +261,16 @@
                     </ul>
                 </div>
             </section>
+            <div>
+                <!-- Put this div tag to the place, where the Comments block will be -->
+                <div id="vk_comments"></div>
+                <script type="text/javascript">
+                    VK.Widgets.Comments("vk_comments", {
+                        limit: 10,
+                        attach: "*"
+                    });
+                </script>
+            </div>
             <!-- подвал -->
             <footer class="footer" id="footer">
                 <div class="footer__text-box">
@@ -265,7 +283,9 @@
                         <p class="footer__number">+79122120680</p>
                     </li>
                     <li class="footer__link-place">
-                        <p class="footer__mail">masterskayia-etud@yandex.ru</p>
+                        <a href="mailto:masterskayia-etud@yandex.ru?subject=Заявка на услуги фортепианной масстерской Этюд">
+                            <p class="footer__mail">masterskayia-etud@yandex.ru</p>
+                        </a>
                     </li>
 
                     <li class="footer__link-place">
