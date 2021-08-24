@@ -118,6 +118,16 @@
         </header>
         <!-- content -->
         <div class="content">
+            <div>
+                <!-- Put this div tag to the place, where the Comments block will be -->
+                <div id="vk_comments"></div>
+                <script type="text/javascript">
+                    VK.Widgets.Comments("vk_comments", {
+                        limit: 10,
+                        attach: "*"
+                    });
+                </script>
+            </div>
             <!-- о нас -->
             <section class="company" id="company">
                 <div class="company__box">
@@ -261,16 +271,7 @@
                     </ul>
                 </div>
             </section>
-            <div>
-                <!-- Put this div tag to the place, where the Comments block will be -->
-                <div id="vk_comments"></div>
-                <script type="text/javascript">
-                    VK.Widgets.Comments("vk_comments", {
-                        limit: 10,
-                        attach: "*"
-                    });
-                </script>
-            </div>
+
             <!-- подвал -->
             <footer class="footer" id="footer">
                 <div class="footer__text-box">
