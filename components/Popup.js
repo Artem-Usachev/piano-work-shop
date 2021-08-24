@@ -15,6 +15,7 @@ export class Popup {
         this.popup.classList.add('invisible');
         this.popup.removeEventListener('mousedown', this._handleClickClose)
         document.removeEventListener('keydown', this._handleEscClose)
+
     }
 
     _handleEscClose(e) {

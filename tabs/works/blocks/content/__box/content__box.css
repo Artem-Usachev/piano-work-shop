@@ -1,5 +1,6 @@
 .content__box {
     text-align: start;
     color: white;
+    padding: 0;
     max-width: 500px;
 }

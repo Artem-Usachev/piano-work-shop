@@ -1,0 +1,10 @@
+.content__border {
+    margin: 50px 0;
+    display: flex;
+}
+
+@media screen and (max-width: 676px) {
+    .content__border {
+        flex-direction: column;
+    }
+}

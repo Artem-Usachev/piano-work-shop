@@ -4,6 +4,7 @@
     min-width: 320px;
     min-height: 100vh;
     position: relative;
+    overflow: hidden;
     padding: 0;
     box-sizing: border-box;
     background-color: rgb(49, 43, 43);

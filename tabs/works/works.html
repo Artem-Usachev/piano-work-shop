@@ -55,6 +55,16 @@
                     <img class="header__logo" src="../../images/logo.svg" alt="лого">
                     <img class="header__nav" src="../../images/menu-icon.png" alt="меню">
                 </div>
+                <!-- галлерея -->
+                <div class=" invisible gallery">
+                    <div class="gallery__border">
+                        <section class="works works_type_keys">
+                        </section>
+                        <button class="popup__exit" type="button">
+                        <img class="popup__exit-img" src="../../images/Close-Icon.svg" alt="закрыть">
+                    </button>
+                    </div>
+                </div>
                 <!-- всплывающее меню -->
                 <nav class="invisible menu ">
 
@@ -78,6 +88,9 @@
                                 <a href="../useful-information/useful-information.html" class="menu__link" id="menu__link">Полезная информация</a>
                             </li>
                             <li>
+                                <a href="../about-me/about.html" class="menu__link" id="menu__link">О нас</a>
+                            </li>
+                            <li>
                                 <a href="../contacts/contacts.html" class="menu__link menu__link-type-contacts" id="menu__link">Контакты</a>
                             </li>
 
@@ -88,80 +101,61 @@
             </div>
         </header>
         <div class="content">
+
             <div class="content__box">
                 <h1 class=" content__title">Работы</h1>
-                <p class="content__subtitle">В данном разделе вам представленны работы нашей мастерской,подробнее ознакомиться с материалом можно кликнув по фото</p>
+                <p class="content__subtitle">В данном разделе, вам представленны работы нашей мастерской, ознакомиться с материалами можно кликнув по названию вида работы</p>
             </div>
             <div class="line"></div>
             <!-- works -->
+
+            <ul class="content__li-box">
+                <li class="content__li-box-title"><a class="content__link " href="../gallery/keys/keys.html">
+                    Клавиатура
+                </a></li>
+                <li class="content__li-box-title"><a class="content__link " href="../gallery/transportation/transportation.html">Транспортировка</a></li>
+                <li class="content__li-box-title"><a class="content__link " href="../gallery/pegs/pegs.html">Колки</a></li>
+                <li class="content__li-box-title"><a class="content__link " href="../gallery/painting/painting.html">Покраска</a></li>
+                <li class="content__li-box-title"><a class="content__link " href="../gallery/mechanics/mechanics.html">Механика</a></li>
+                <li class="content__li-box-title"><a class="content__link " href="../gallery/cleaning/cleaning.html">Чистка</a></li>
+                <li class="content__li-box-title"><a class="content__link " href="../gallery/repair/repair.html">Ремонт</a></li>
+            </ul>
+
             <!-- клавиатура -->
-            <div class="content__box">
-                <h1 class="works__title">Клавиатура:</h1>
-            </div>
-            <section class="works works_type_keys">
-            </section>
+
+
             <!-- колки -->
-            <div class="content__box">
-                <h1 class="works__title">Колки:</h1>
-            </div>
-            <section class="works works_type_pegs">
-            </section>
+
+
             <!-- Механика -->
-            <div class="content__box">
-                <h1 class="works__title">Механика:</h1>
-            </div>
-            <section class="works works_type_mechanics">
-            </section>
+
+
             <!-- Покраска -->
-            <div class="content__box">
-                <h1 class="works__title">Покраска:</h1>
-            </div>
-            <section class="works works_type_painting">
-            </section>
-            <!-- Полировка -->
-            <div class="content__box">
-                <h1 class="works__title">Полировка:</h1>
-            </div>
-            <section class="works works_type_polishing">
-            </section>
+
+
             <!-- Регулировка механики -->
-            <div class="content__box">
-                <h1 class="works__title">Регулировка механики:</h1>
-            </div>
-            <section class="works works_type_adjusting-mechanics">
+
+            <!-- <section class="works works_type_adjusting-mechanics">
             </section>
-            <!-- Ремонт -->
-            <div class="content__box">
-                <h1 class="works__title">Ремонт:</h1>
-            </div>
-            <section class="works works_type_repair">
-            </section>
+  -->
+
+
             <!-- Струнная рубашка -->
-            <div class="content__box">
-                <h1 class="works__title">Струнная рубашка:</h1>
-            </div>
-            <section class="works works_type_string-shirt">
-            </section>
+
+            <!-- <section class="works works_type_string-shirt">
+            </section> -->
             <!-- Транспортировка -->
-            <div class="content__box">
-                <h1 class="works__title">Транспортировка:</h1>
-            </div>
-            <section class="works works_type_transportation">
-            </section>
+
             <!-- Чистка -->
-            <div class="content__box">
-                <h1 class="works__title">Чистка:</h1>
-            </div>
-            <section class="works works_type_cleaning">
-            </section>
-            <template class="work-template "> 
-            <article class="work"> 
-                <img src="/ " class="work__illustration " alt="/ "> 
-                <div class="work__box "> 
-                    <h2 class="work__title "></h2> 
-                </div> 
-            </article> 
-        </template>
+
+            <!-- <template class="work-template "> 
+                <article class="work"> 
+                    <img src="/ " class="work__illustration " alt="/ "> 
+                    <div class="work__box "> 
+                        <h2 class="work__title "></h2> 
+                    </div> 
+                </article> 
+            </template> -->
         </div>
         <!-- подвал -->
         <div class="line"></div>

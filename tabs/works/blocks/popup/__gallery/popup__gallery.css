@@ -1,0 +1,9 @@
+.popup__gallery {
+    background-color: black;
+    opacity: 0.9;
+}
+
+.gallery__border {
+    position: relative;
+    z-index: 100;
+}

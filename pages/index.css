@@ -63,6 +63,7 @@
 @import url(../blocks/company/__subtitle/company__subtitle.css);
 @import url(../blocks/company/__text-box/company__text-box.css);
 @import url(../blocks/company/__title/company__title.css);
+@import url(../blocks/company/__master-link/company__master-link.css);
 
 /* content */
 
@@ -111,6 +112,7 @@
 @import url(../blocks/services/services.css);
 @import url(../blocks/services/__title/services__title.css);
 @import url(../blocks/services/__cards/services__cards.css);
+@import url(../blocks/services/__link/servces__link.css);
 
 /* video */
 
@@ -149,3 +151,6 @@
 /* invisible */
 
 @import url(../blocks/invisible/invisible.css);
+span {
+    font-weight: bold;
+}

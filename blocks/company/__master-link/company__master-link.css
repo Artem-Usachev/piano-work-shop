@@ -1,0 +1,21 @@
+.company__master-link {
+  list-style: none;
+  color: #312b2b;
+  text-decoration: none;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 1px;
+  transition: background-size 1s;
+  outline: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+}
+.company__master-link:hover {
+  cursor: pointer;
+  background-size: 100% 1px;
+}
+
+.company__master-link:active {
+  background-size: 100% 1px;
+}

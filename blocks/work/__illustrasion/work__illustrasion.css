@@ -1,18 +1,18 @@
 .work__illustrasion {
-    max-width: 500px;
-    max-height: 500px;
-    min-width: 220px;
-    min-height: 220px;
-    width: 100%;
-    grid-area: illustration;
-    cursor: pointer;
-    transition: 1s ease all;
-    border-radius: 10px;
-    outline: none;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    -webkit-tap-highlight-color: transparent;
+  max-width: 500px;
+  max-height: 500px;
+  min-width: 220px;
+  min-height: 220px;
+  width: 100%;
+  grid-area: illustration;
+  cursor: pointer;
+  transition: 1s ease all;
+  border-radius: 10px;
+  outline: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
 }
 
 .work__illustrasion:hover {
-    opacity: 0.8;
+  opacity: 0.8;
 }

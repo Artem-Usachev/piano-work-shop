@@ -1,0 +1,29 @@
+.content__li-box-title {
+    margin-top: 10px;
+    padding: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 29px;
+    max-width: max-content;
+}
+
+.content__li-box-title:hover {
+    cursor: pointer;
+    color: rgb(49, 43, 43);
+}
+
+@media screen and (max-width: 1279px) {
+    .content__li-box-title {
+        font-size: 19px;
+        line-height: 23px;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .content__li-box-title {
+        font-size: 14px;
+        line-height: 17px;
+    }
+}

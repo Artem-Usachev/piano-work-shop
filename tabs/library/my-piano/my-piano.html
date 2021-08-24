@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Матсерская Этюд</title>
+    <link rel="icon" href="../../../images/site-icon.png" type="png">
+    <link rel="stylesheet" href="../../useful-information/pages/useful-information.css">
+
+</head>
+
+<body class="body">
+    <!-- preloader -->
+    <div class="preloader">
+        <div class="preloader__item"></div>
+    </div>
+    <div class="page">
+        <!-- photo popup -->
+        <div class="invisible popup popup_type_photo">
+            <figure class="popup__border">
+                <img src="./" alt="/" class="popup__illustration">
+                <button type="button " class="popup__exit">
+                <img src="../../../images/Close-Icon.svg" alt="закрыть " class="popup__exit-img ">
+            </button>
+                <figcaption class="popup__signature "></figcaption>
+            </figure>
+        </div>
+        <!-- popup-application -->
+        <div class="invisible popup-application popup ">
+            <div class="popup__border">
+                <button class="popup__exit" type="button">
+                <img class="popup__exit-img" src="../../../images/Close-Icon.svg" alt="закрыть">
+            </button>
+                <form class="popup__content" action="send.php" method="post">
+                    <h2 class="popup__title">Оставить Заявку</h2>
+                    <div class="popup__box_name popup__box">
+                        <input type="text" class="popup__text popup__user-name" name="name" placeholder="Фамилия Имя Отчесвто" required>
+                    </div>
+                    <div class="popup__box_service popup__box">
+                        <input type="text" class="popup__text popup__user-service" name="service" placeholder="Услуга" required>
+                    </div>
+                    <div class="popup__box_telephone popup__box">
+                        <input type="text" class="popup__text popup__user-telephone" name="telephone" placeholder="Номер телефона" required>
+                    </div>
+                    <button class="popup__button " type="submit">Отправить</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- header -->
+        <header class="header">
+            <div class="header__overflou">
+                <!-- строчка с меню -->
+                <div class="header__bar">
+                    <img class="header__logo" src="../../../images/logo.svg" alt="лого">
+                    <img class="header__nav" src="../../../images/menu-icon.png" alt="меню">
+                </div>
+                <!-- всплывающее меню -->
+                <nav class="invisible menu ">
+
+                    <div class="menu__border">
+                        <img class="menu__exit" alt="закрыть" src="../../../images/exit.svg">
+                        <ul class="menu__body">
+                            <li>
+                                <a href="../../../index.html" class="menu__link" id="menu__link">Главная</a>
+                            </li>
+                            <li>
+                                <p class="menu__link menu__link-application" id="menu__link">Оставить заявку</p>
+                            </li>
+
+                            <li>
+                                <a href="../../price/price.html" class="menu__link" id="menu__link">Услуги и Цены</a>
+                            </li>
+                            <li>
+                                <a href="../../works/works.html" class="menu__link" id="menu__link">Работы</a>
+                            </li>
+                            <li>
+                                <a href="../../useful-information/useful-information.html" class="menu__link" id="menu__link">Полезная информация</a>
+                            </li>
+                            <li>
+                                <a href="../../about-me/about.html" class="menu__link" id="menu__link">О нас</a>
+                            </li>
+                            <li>
+                                <a href="../../contacts/contacts.html" class="menu__link menu__link-type-contacts" id="menu__link">Контакты</a>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                </nav>
+            </div>
+        </header>
+        <div class="content">
+            <div class="content__box">
+                <h1 class=" content__title">"Моё пианино в отличном состоянии, мне его надо ТОЛЬКО НАСТРОИТЬ!"</h1>
+                <p class="content__subtitle">Эта мысль, как правило, высказывается клиентами с целью сокращения расходов на обслуживание инструмента. Но мало кто понимает, что "только настроить" фортепиано (если инструмент не обслуживался до этого стабильно раз в полгода - год),
+                    категорически нельзя.</p>
+            </div>
+            <div class="line"></div>
+            <section class="article">
+                <p class="article__subtitle"></p>
+                <br> Перед настройкой практически всегда необходимо привести в порядок механику:
+                <ul class="article__section">
+                    <li> установить точно молотки</li>
+                    <li>закрепить шурупы</li>
+                    <li>отрегулировать зазоры всех соединений</li>
+                    <li>подклеить отклеившиеся детали</li>
+
+                    <li>провести необходимый мелкий ремонт и много других, не совсем понятных для рядового клиента, работ.</li>
+                </ul>
+                <p class="article__subtitle"> Если не обслуживать инструмент, и при этом его ТОЛЬКО НАСТРОИТЬ, строй может "поплыть" всего через пару недель! Привычные стуки и скрипы от неотрегулированной молоточковой механики не добавят удовольствия от игры (даже на настроенном инструменте).
+                    А этот результат не устроит ни вас, ни, в первую очередь, мастера.<br> Следите за здоровьем Вашего инструмена!
+                </p>
+            </section>
+            <div class="line"></div>
+        </div>
+        <!-- подвал -->
+
+        <footer class="footer" id="footer">
+
+            <div class="footer__text-box">
+                <h2 class="footer__title">Свяжитесь с Нами</h2>
+                <p class="footer__subtitle">Вы можете задать вопросы и заказать услуги<br>по телефону, почте или в наших соцсетях</p>
+                <p class="footer__author">&#169 Этюд Фортепианная Мастерская</p>
+            </div>
+            <ul class="footer__links">
+                <li class="footer__link-place">
+                    <p class="footer__number">+79122120680</p>
+                </li>
+                <li class="footer__link-place">
+                    <p class="footer__mail">masterskayia-etud@yandex.ru</p>
+                </li>
+
+                <li class="footer__link-place">
+                    <ul class="footer__soshial">
+                        <li class="footer__link-place">
+                            <a class="footer__link" href="https://vk.com/pavelpianotuning" target="_blank" rel="noopener">
+                                <img class="footer__link-image" src="../../../images/vk.svg" alt="ВК">
+                            </a>
+                        </li>
+                        <li class="footer__link-place">
+                            <a class="footer__link" href="https://www.instagram.com/pavel_kruchinskii/" target="_blank" rel="noopener">
+                                <img class="footer__link-image" src="../../../images/insta.svg" alt="Инстаграм">
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </footer>
+
+    </div>
+    <script type="module" src="../../useful-information/pages/useful-information.js"></script>
+</body>
+
+</html>

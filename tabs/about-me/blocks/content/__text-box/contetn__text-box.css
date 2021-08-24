@@ -1,0 +1,9 @@
+.content__text-box {
+    margin: 0 15px;
+}
+
+@media screen and (max-width: 676px) {
+    .content__text-box {
+        margin: 20px auto;
+    }
+}

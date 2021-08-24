@@ -2,6 +2,11 @@
 
 @import url(../../../vendor/fonts.css);
 
+/* animation */
+
+@import url(../../../animation/arrow-left.css);
+@import url(../../../animation/arrow-right.css);
+
 /* popup */
 
 @import url(../blocks/popup/popup.css);
@@ -17,6 +22,7 @@
 @import url(../blocks/popup/_type/popup_type_photo.css);
 @import url(../blocks/popup/__error/popup__error.css);
 @import url(../blocks/popup/__button/_condition/popup__button_condition_active.css);
+@import url(../blocks/popup/__gallery/popup__gallery.css);
 
 /* content */
 
@@ -24,6 +30,9 @@
 @import url(../blocks/content/__box/content__box.css);
 @import url(../blocks/content/__subtitle/content__subtitle.css);
 @import url(../blocks/content/__title/content__title.css);
+@import url(../blocks/content/__li-box/content__li-box.css);
+@import url(../blocks/content/__li-box-title/content__li-box-title.css);
+@import url(../blocks/content/__link/content__link.css);
 
 /* footer */
 
@@ -80,11 +89,24 @@
 
 @import url(../blocks/work/work.css);
 @import url(../blocks/work/__box/work__box.css);
+@import url(../blocks/work/__illustration/_big/work__illustration_big.css);
 @import url(../blocks/work/__title/work__title.css);
 @import url(../blocks/work/__illustration/work__illustration.css);
-@import url(../blocks/work/__illustration/_big/work__illustration_big.css);
+
+/* works */
+
 @import url(../blocks/works/works.css);
+
+/* arrow */
+
+@import url(../blocks/arrow/arrow.css);
+@import url(../blocks/arrow/_posishion/arrow_posishion_left.css);
+@import url(../blocks/arrow/_posishion/arrow_posishion_right.css);
 
 /* line */
 
 @import url(../blocks/line/line.css);
+
+/* gallery */
+
+@import url(../blocks/gallery/gallery.css);

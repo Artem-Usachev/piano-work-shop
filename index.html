@@ -78,8 +78,12 @@
                             <li>
                                 <a href="./tabs/works/works.html" class="menu__link">Работы</a>
                             </li>
+
                             <li>
                                 <a href="./tabs/useful-information/useful-information.html" class="menu__link">Полезная информация</a>
+                            </li>
+                            <li>
+                                <a href="./tabs/about-me/about.html" class="menu__link" id="menu__link">О нас</a>
                             </li>
                             <li>
                                 <a href="./tabs/contacts/contacts.html" class="menu__link menu__link-type-contacts">Контакты</a>
@@ -111,18 +115,19 @@
                     <h2 class="company__main-title">О Мастерской</h2>
                 </div>
                 <div class="company__about">
-                    <h3 class="company__title">Забота о вашем инструменте</h3>
-                    <p class="company__subtitle">Мастерская основана в 2017 году как частный проэкт фортепианного мастера, для спасения инструментов Свердловской области.
+                    <h3 class="company__title">Забота о Вашем инструменте</h3>
+                    <p class="company__subtitle">Мастерская основана в 2017 году как частный проект фортепианного мастера, для проведения ремонта инструментов Свердловской области.
                     </p>
                 </div>
                 <div class="company__master">
                     <h3 class="company__title"> Мастер - Павел Кручинский</h3>
-                    <p class="company__subtitle">Удостоверение настройщика пианино и роялей<br>Ученик Школы Квинта 2, Порвенкова В.Г. Федоров В.В. Ассоциации фортепианных мастеров России<br> Опыт Работы с 2012 года</p>
+                    <p class="company__subtitle">Удостоверение настройщика пианино и роялей<br>Стажировка в Ассоциации фортепианных мастеров России<br> Опыт Работы с 2012 года</p>
+                    <a class="company__subtitle company__master-link" href="./tabs/about-me/about.html"><span >подробнее...</span></a>
                 </div>
             </section>
             <!-- services -->
             <section class="services" id="services">
-                <div class="popup invisible popup-settings">
+                <!-- <div class="popup invisible popup-settings">
                     <div class="popup__border">
                         <button class="popup__exit" type="button">
                             <img class="popup__exit-img popup__exit-img-settings" src="./images/Close-Icon.svg" alt="закрыть">
@@ -173,25 +178,33 @@
                                     Подробнее</button></a>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <h2 class="services__title">Услуги</h2>
                 <div class="services__cards">
-                    <div class="card card-settings">
-                        <div class="card__overlay"></div>
-                        <p class="card__text">Настройка<br> Инструмента</p>
-                    </div>
-                    <div class="card card-repair">
-                        <div class="card__overlay"></div>
-                        <p class="card__text">Ремонт<br> Инструмента</p>
-                    </div>
-                    <div class="card card-transportation">
-                        <div class="card__overlay"></div>
-                        <p class="card__text">Перевозка<br> Инструмента</p>
-                    </div>
-                    <div class="card card-diagnostics">
-                        <div class="card__overlay"></div>
-                        <p class="card__text ">Диагностика<br> Инструмента</p>
-                    </div>
+                    <a class="servces__link" href="./tabs/price/price.html#:~:text=Настройка">
+                        <div class="card card-settings">
+                            <div class="card__overlay"></div>
+                            <p class="card__text">Настройка<br> Инструмента</p>
+                        </div>
+                    </a>
+                    <a class="servces__link" href="./tabs/price/price.html#:~:text=Ремонт">
+                        <div class="card card-repair">
+                            <div class="card__overlay"></div>
+                            <p class="card__text">Ремонт<br> Инструмента</p>
+                        </div>
+                    </a>
+                    <a class="servces__link" href="./tabs/price/price.html#:~:text=Перевозка и Осмотр">
+                        <div class="card card-transportation">
+                            <div class="card__overlay"></div>
+                            <p class="card__text">Перевозка<br> Инструмента</p>
+                        </div>
+                    </a>
+                    <a class="servces__link" href="./tabs/price/price.html#:~:text=Выезд на осмотр/оценку инструмента">
+                        <div class="card card-diagnostics">
+                            <div class="card__overlay"></div>
+                            <p class="card__text ">Диагностика<br> Инструмента</p>
+                        </div>
+                    </a>
                 </div>
             </section>
             <!-- работы -->
@@ -205,35 +218,35 @@
                             <img class="work__illustrasion" alt="Настройка инструмента" src="./images/1.jpg">
                             <div class="work__text">
                                 <h3 class="work__text-title">Настройка инструмента</h3>
-                                <p class="work__subtitle">Паша сделай текст!Паша сделай текст!Паша сделай текст!Паша сделай текст!Паша сделай текст!Паша сделай текст!</p>
+                                <p class="work__subtitle">Класическая темперация 435 -442герц</p>
                             </div>
                         </li>
                         <li class="work__card">
                             <img class="work__illustrasion" alt="Ремонт инструмента" src="./images/2.jpg">
                             <div class="work__text">
                                 <h3 class="work__text-title">Ремонт инструмента</h3>
-                                <p class="work__subtitle">Паша сделай текст!Паша сделай текст!Паша сделай текст!Паша сделай текст!Паша сделай текст!Паша сделай текст!</p>
+                                <p class="work__subtitle">Ремонт корпуса, устранение трещин</p>
                             </div>
                         </li>
                         <li class="work__card">
                             <img class="work__illustrasion" alt="Устранение износа и замена элементов" src="./images/3.jpg">
                             <div class="work__text">
                                 <h3 class="work__text-title">Устранение износа и замена элементов</h3>
-                                <p class="work__subtitle">Паша сделай текст!Паша сделай текст!Паша сделай текст!Паша сделай текст!Паша сделай текст!Паша сделай текст!</p>
+                                <p class="work__subtitle">Восстановление или замена</p>
                             </div>
                         </li>
                         <li class="work__card">
                             <img class="work__illustrasion" alt="Замена порченного молью фетра" src="./images/4.jpg">
                             <div class="work__text">
                                 <h3 class="work__text-title">Замена порченного молью фетра</h3>
-                                <p class="work__subtitle">Паша сделай текст!Паша сделай текст!Паша сделай текст!Паша сделай текст!Паша сделай текст!Паша сделай текст!</p>
+                                <p class="work__subtitle">Чистка от насекомых</p>
                             </div>
                         </li>
                         <li class="work__card">
                             <img class="work__illustrasion" alt="Полировка или покраска" src="./images/5.jpg">
                             <div class="work__text">
                                 <h3 class="work__text-title">Полировка и покраска</h3>
-                                <p class="work__subtitle">Паша сделай текст!Паша сделай текст!Паша сделай текст!Паша сделай текст!Паша сделай текст!Паша сделай текст!</p>
+                                <p class="work__subtitle">Восстановление лакокрасочного покрытия</p>
                             </div>
                         </li>
                     </ul>
@@ -242,7 +255,7 @@
             <!-- подвал -->
             <footer class="footer" id="footer">
                 <div class="footer__text-box">
-                    <h2 class="footer__title">Свяжитесь с Нами</h2>
+                    <h2 class="footer__title">Свяжитесь с нами</h2>
                     <p class="footer__subtitle">Вы можете задать вопросы и заказать услуги<br>по телефону, почте или в наших соцсетях</p>
                     <p class="footer__author">&#169 Этюд Фортепианная Мастерская</p>
                 </div>

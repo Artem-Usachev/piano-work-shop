@@ -33,3 +33,12 @@ const footerOpenPopuBtn = document.querySelector('.footer__title')
 footerOpenPopuBtn.addEventListener('click', () =>
     popupAplication.open()
 )
+
+popupPhoto.setEventListeners();
+const workImg = document.querySelectorAll(".content__illustration");
+workImg.forEach((img) => {
+    img.addEventListener("click", (e) => {
+        console.log(e);
+        popupPhoto.open(e);
+    });
+});
