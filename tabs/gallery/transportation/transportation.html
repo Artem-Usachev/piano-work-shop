@@ -1,54 +1,58 @@
 <!DOCTYPE html>
 <html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Мастерская Этюд</title>
+    <link rel="icon" href="../../../images/site-icon.png" type="image/png" />
+    <link rel="stylesheet" href="../keys/pages/keys.css" />
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Матсерская Этюд</title>
-    <link rel="icon" href="../../../images/site-icon.png" type="png">
-    <link rel="stylesheet" href="../keys/pages/keys.css">
-</head>
-
-<body class="body">
+  <body class="body">
     <!-- preloader -->
     <div class="preloader">
-        <div class="preloader__item"></div>
+      <div class="preloader__item"></div>
     </div>
     <div class="page">
-        <!-- photo popup -->
-        <div class="invisible popup popup_type_photo">
-            <figure class="popup__border">
-                <img src="./" alt="/" class="popup__illustration">
-                <button type="button " class="popup__exit">
-                        <img src="../../../images/Close-Icon.svg" alt="закрыть " class="popup__exit-img ">
-            </button>
-                <figcaption class="popup__signature "></figcaption>
-            </figure>
-        </div>
-        <!-- header -->
-        <div class="header"></div>
+      <!-- photo popup -->
+      <div class="invisible popup popup_type_photo">
+        <figure class="popup__border">
+          <img src="./" alt="/" class="popup__illustration" />
+          <button type="button " class="popup__exit">
+            <img
+              src="../../../images/Close-Icon.svg"
+              alt="закрыть "
+              class="popup__exit-img"
+            />
+          </button>
+          <figcaption class="popup__signature"></figcaption>
+        </figure>
+      </div>
+      <!-- header -->
+      <div class="header"></div>
 
-        <div class="content">
-            <a href="../../works/works.html">
-                <button type="button " class="popup__exit">
-                    <img src="../../../images/Close-Icon.svg" alt="закрыть " class="exit-button">
-                </button>
-            </a>
-            <section class="works works_type_repair">
-            </section>
-            <section class="works works_type_transportation">
-            </section>
-            <template class="work-template "> 
-                <article class="work"> 
-                    <img src="/ " class="work__illustration " alt="/ "> 
-                    <div class="work__box "> 
-                        <h2 class="work__title "></h2> 
-                    </div> 
-                </article> 
-            </template>
-        </div>
+      <div class="content">
+        <a href="../../works/works.html">
+          <button type="button " class="popup__exit">
+            <img
+              src="../../../images/Close-Icon.svg"
+              alt="закрыть "
+              class="exit-button"
+            />
+          </button>
+        </a>
+        <section class="works works_type_repair"></section>
+        <section class="works works_type_transportation"></section>
+        <template class="work-template">
+          <article class="work">
+            <img src="/ " class="work__illustration" alt="/ " />
+            <div class="work__box">
+              <h2 class="work__title"></h2>
+            </div>
+          </article>
+        </template>
+      </div>
     </div>
     <script type="module" src="./pages/transportation.js"></script>
-</body>
-
+  </body>
 </html>

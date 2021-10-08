@@ -4,9 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
     <title>Мастерская Этюд</title>
-    <link rel="icon" href="./images/site-icon.png" type="png">
+    <link rel="icon" href="./images/site-icon.png" type="image/png">
     <link rel="stylesheet" href="./pages/index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
 <body class="body">
@@ -15,6 +17,33 @@
         <div class="preloader__item"></div>
     </div>
     <div class="page">
+        <!-- popup congratulation -->
+        <div class="invisible popup popup_type_congratulation">
+            <figure class="popup__border">
+                <button type="button " class="popup__exit">
+                    <img src="./images/Close-Icon.svg" alt="закрыть " class="popup__exit-img ">
+                </button>
+                <div class="popup__content">
+                    <h2 class="popup__title">Заявка успешно отправлена, спасибо!</h2>
+                    <button class="popup__button popup__button_condition_active popup_type_congratulation_button" type="button">Ок</button>
+                </div>
+                <figcaption class="popup__signature "></figcaption>
+            </figure>
+        </div>
+        <!-- popup error -->
+        <div class="invisible popup popup_type_error">
+            <figure class="popup__border">
+                <button type="button " class="popup__exit">
+                    <img src="./images/Close-Icon.svg" alt="закрыть " class="popup__exit-img ">
+                </button>
+                <div class="popup__content">
+                    <h2 class="popup__title">При отправке заявки произошла ошибка</h2>
+                    <p class="popup__text">Свяжитесь снами по телефону или напишите письмо на почту</p>
+                    <button class="popup__button popup__button_condition_active popup_type_error_button" type="button">Ок</button>
+                </div>
+                <figcaption class="popup__signature "></figcaption>
+            </figure>
+        </div>
         <!-- photo popup -->
         <div class="invisible popup popup_type_photo">
             <figure class="popup__border">
@@ -26,32 +55,33 @@
             </figure>
         </div>
         <!-- popup-application -->
-        <div class="popup-application popup invisible">
+        <div class="invisible popup-application popup ">
             <div class="popup__border">
                 <button class="popup__exit" type="button">
-                    <img class="popup__exit-img" src="./images/Close-Icon.svg" alt="закрыть">
-                </button>
-                <form class="popup__content" enctype="multipart/form-data" method="post" id="form" onsubmit="send(event, 'send.php')">
+                <img class="popup__exit-img" src="./images/Close-Icon.svg" alt="закрыть">
+            </button>
+                <form class="popup__content popup__form" enctype="multipart/form-data" method="post" id="form">
                     <h2 class="popup__title">Оставить Заявку</h2>
                     <div class="popup__box_name popup__box">
-                        <input type="text" class="popup__text popup__user-name" name="name" placeholder="Фамилия Имя Отчесвто" required>
+                        <input type="text" class="popup__text popup__user-name" id="user-name" name="name" placeholder="Фамилия Имя Отчество" required minlength="5" maxlength="40">
+                        <p class="user-name-error text-error invisible"></p>
                     </div>
                     <div class="popup__box_service popup__box">
-                        <input type="text" class="popup__text popup__user-service" name="service" placeholder="Услуга" required>
+                        <input type="text" class="popup__text popup__user-service" id="user-services" name="services" placeholder="Услуга" required minlength="5" maxlength="50">
+                        <p class="user-services-error text-error invisible"></p>
                     </div>
                     <div class="popup__box_telephone popup__box">
-                        <input type="text" class="popup__text popup__user-telephone" name="phone" placeholder="Номер телефона" required>
+                        <input type="text" class="popup__text popup__user-telephone" id="user-phone" name="phone" placeholder="Номер телефона" minlength="11" maxlength="11" required>
+                        <p class="user-phone-error text-error invisible"></p>
                     </div>
-                    <button class="popup__button popup__button_condition_active " type="submit">Отправить</button>
+                    <button class="popup__button popup__button_condition_active " disabled id="popup__button_type_submit" type="submit">Отправить</button>
                 </form>
             </div>
         </div>
 
         <!-- header -->
         <header class="header">
-            <div class="video">
-                <video class="video__media" src="./video/header__video.mp4" autoplay muted loop></video>
-            </div>
+
             <div class="header__content">
                 <!-- строчка с меню -->
                 <div class="header__bar">
@@ -83,7 +113,10 @@
                                 <a href="./tabs/useful-information/useful-information.html" class="menu__link">Полезная информация</a>
                             </li>
                             <li>
-                                <a href="./tabs/about-me/about.html" class="menu__link" id="menu__link">О нас</a>
+                                <a href="./tabs/about-me/about.html" class="menu__link">О нас</a>
+                            </li>
+                            <li>
+                                <a href="./tabs/reviews/reviews.html" class="menu__link">Отзывы</a>
                             </li>
                             <li>
                                 <a href="./tabs/contacts/contacts.html" class="menu__link menu__link-type-contacts">Контакты</a>
@@ -106,80 +139,35 @@
                     <span class="arrow-down__item"></span>
                 </div>
             </div>
+            <div class="video">
+                <video class="video__media" src="./video/header__video.mp4" autoplay muted loop></video>
+            </div>
         </header>
         <!-- content -->
         <div class="content">
             <!-- о нас -->
             <section class="company" id="company">
                 <div class="company__box">
-                    <h2 class="company__main-title">О Мастерской</h2>
+                    <a class="menu__link" href="./tabs/about-me/about.html">
+                        <h2 class="company__main-title">О Мастерской</h2>
+                    </a>
                 </div>
                 <div class="company__about">
                     <h3 class="company__title">Забота о Вашем инструменте</h3>
-                    <p class="company__subtitle">Мастерская основана в 2017 году как частный проект фортепианного мастера, для проведения ремонта инструментов Свердловской области.
+                    <p class="company__subtitle">Мастерская основана в 2017 году как частный проект фортепианного мастера для проведения ремонта инструментов Свердловской области.
                     </p>
                 </div>
                 <div class="company__master">
-                    <h3 class="company__title"> Мастер - Павел Кручинский</h3>
+                    <h3 class="company__title">Мастер - Павел Кручинский</h3>
                     <p class="company__subtitle">Удостоверение настройщика пианино и роялей<br>Стажировка в Ассоциации фортепианных мастеров России<br> Опыт Работы с 2012 года</p>
                     <a class="company__subtitle company__master-link" href="./tabs/about-me/about.html"><span >подробнее...</span></a>
                 </div>
             </section>
             <!-- services -->
             <section class="services" id="services">
-                <!-- <div class="popup invisible popup-settings">
-                    <div class="popup__border">
-                        <button class="popup__exit" type="button">
-                            <img class="popup__exit-img popup__exit-img-settings" src="./images/Close-Icon.svg" alt="закрыть">
-                        </button>
-                        <div class="popup__content">
-                            <h2 class="popup__title">Настройка</h2>
-                            <p class="popup__subtitle">Класическая темперация 435 -442герц.</p>
-                            <a href="./tabs/price/price.html"><button class="popup__button popup__button_condition_active" type="button">
-                                Подробнее</button></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="popup invisible popup-repair">
-                    <div class="popup__border">
-                        <button class="popup__exit" type="button">
-                            <img class="popup__exit-img popup__exit-img-repair" src="./images/Close-Icon.svg" alt="закрыть">
-                        </button>
-                        <div class="popup__content">
-                            <h2 class="popup__title">Ремонт</h2>
-                            <p class="popup__subtitle">Ремонт инструмента до полного работоспособного состояния с возможной заменой элементов.</p>
-                            <a href="./tabs/price/price.html"><button class="popup__button popup__button_condition_active" type="button">
-                                    Подробнее</button></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="popup invisible popup-transportation">
-                    <div class="popup__border">
-                        <button class="popup__exit" type="button">
-                            <img class="popup__exit-img popup__exit-img-transportation" src="./images/Close-Icon.svg" alt="закрыть">
-                        </button>
-                        <div class="popup__content">
-                            <h2 class="popup__title">Перевозка Инструмента</h2>
-                            <p class="popup__subtitle">Акуратная перевозка проверенными, профессиональными грузчиками, занимающимися этим делом, вот уже, много лет.</p>
-                            <a href="./tabs/price/price.html"></a><button class="popup__button popup__button_condition_active" href="./tabs/price/price.html" type="button">
-                                    Подробнее</button></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="popup invisible popup-diagnostics">
-                    <div class="popup__border">
-                        <button class="popup__exit" type="button">
-                            <img class="popup__exit-img popup__exit-img-diagnostics" src="./images/Close-Icon.svg" alt="закрыть">
-                        </button>
-                        <div class="popup__content">
-                            <h2 class="popup__title">Диагностика</h2>
-                            <p class="popup__subtitle">Оценка инструмента по всем пунктам для дальнейшего восстановления</p>
-                            <a href="./tabs/price/price.html"><button class="popup__button popup__button_condition_active" type="button">
-                                    Подробнее</button></a>
-                        </div>
-                    </div>
-                </div> -->
-                <h2 class="services__title">Услуги</h2>
+                <a class="menu__link" href="./tabs/price/price.html">
+                    <h2 class="services__title">Услуги</h2>
+                </a>
                 <div class="services__cards">
                     <a class="servces__link" href="./tabs/price/price.html#:~:text=Настройка">
                         <div class="card card-settings">
@@ -209,7 +197,9 @@
             </section>
             <!-- работы -->
             <section class="work">
-                <h2 class="work__title">Работы</h2>
+                <a class="menu__link" href="./tabs/works/works.html">
+                    <h2 class="work__title">Работы</h2>
+                </a>
                 <div class="arrow  arrow_posishion_right"></div>
                 <div class="arrow  arrow_posishion_left"></div>
                 <div class="work__border">
@@ -232,7 +222,7 @@
                             <img class="work__illustrasion" alt="Устранение износа и замена элементов" src="./images/3.jpg">
                             <div class="work__text">
                                 <h3 class="work__text-title">Устранение износа и замена элементов</h3>
-                                <p class="work__subtitle">Восстановление или замена</p>
+                                <p class="work__subtitle"></p>
                             </div>
                         </li>
                         <li class="work__card">
@@ -265,8 +255,8 @@
                         <p class="footer__number">+79122120680</p>
                     </li>
                     <li class="footer__link-place">
-                        <a href="mailto:masterskayia-etud@yandex.ru?subject=Заявка на услуги фортепианной масстерской Этюд">
-                            <p class="footer__mail">masterskayia-etud@yandex.ru</p>
+                        <a class="footer__mail" href="mailto:masterskayia-etud@yandex.ru?subject=Заявка на услуги фортепианной мастерской Этюд">
+                            masterskayia-etud@yandex.ru
                         </a>
                     </li>
 
@@ -288,7 +278,9 @@
             </footer>
         </div>
     </div>
+
     <script src="./pages/index.js" type="module"></script>
+
 </body>
 
 </html>

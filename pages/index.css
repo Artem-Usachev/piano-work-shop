@@ -76,7 +76,7 @@
 @import url(../blocks/footer/__link-place/footer__link-place.css);
 @import url(../blocks/footer/__link/footer__link.css);
 @import url(../blocks/footer/__links/footer__links.css);
-@import url(../blocks/footer/__mail/footer__mail.css);
+@import url(../tabs/price/blocks/footer/__mail/footer__mail.css);
 @import url(../blocks/footer/__number/footer__number.css);
 @import url(../blocks/footer/__subtitle/footer__subtitle.css);
 @import url(../blocks/footer/__title/footer__title.css);
@@ -147,6 +147,11 @@
 @import url(../blocks/popup/__error/popup__error.css);
 @import url(../blocks/popup/__button/_condition/popup__button_condition_active.css);
 @import url(../blocks/popup/__subtitle/popup__subtitle.css);
+@import url(../tabs/useful-information/blocks/popup/__button/_condition/popup__button_condition_close.css);
+
+/* text-erroe */
+
+@import url(../blocks/text-error/text-error.css);
 
 /* invisible */
 

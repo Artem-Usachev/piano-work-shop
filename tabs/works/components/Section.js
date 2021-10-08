@@ -6,7 +6,9 @@ export class Section {
     }
 
     render() {
-        this.items.forEach((element) => this.renderer({ name: element.name, link: element.link }, '.work'));
+        this.items.forEach((element) =>
+            this.renderer({ name: element.name, link: element.link }, ".work")
+        );
     }
     addItem(element) {
         this.containerElement.prepend(element);

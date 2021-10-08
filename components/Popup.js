@@ -29,6 +29,7 @@ export class Popup {
         }
     }
     setEventListeners() {
+
         this._closeBtn.addEventListener('click', this.close.bind(this))
     }
 }

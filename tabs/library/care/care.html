@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Матсерская Этюд</title>
-    <link rel="icon" href="../../../images/site-icon.png" type="png">
+    <meta name="format-detection" content="telephone=no">
+    <title>Мастерская Этюд</title>
+    <link rel="icon" href="../../../images/site-icon.png" type="image/png">
     <link rel="stylesheet" href="../../useful-information/pages/useful-information.css">
 
 </head>
@@ -16,6 +17,33 @@
         <div class="preloader__item"></div>
     </div>
     <div class="page">
+        <!-- popup congratulation -->
+        <div class="invisible popup popup_type_congratulation">
+            <figure class="popup__border">
+                <button type="button " class="popup__exit">
+                    <img src="../../../images/Close-Icon.svg" alt="закрыть " class="popup__exit-img ">
+                </button>
+                <div class="popup__content">
+                    <h2 class="popup__title">Заявка успешно отправлена, спасибо!</h2>
+                    <button class="popup__button popup__button_condition_active popup_type_congratulation_button" type="button">Ок</button>
+                </div>
+                <figcaption class="popup__signature "></figcaption>
+            </figure>
+        </div>
+        <!-- popup error -->
+        <div class="invisible popup popup_type_error">
+            <figure class="popup__border">
+                <button type="button " class="popup__exit">
+                    <img src="../../../images/Close-Icon.svg" alt="закрыть " class="popup__exit-img ">
+                </button>
+                <div class="popup__content">
+                    <h2 class="popup__title">При отправке заявки произошла ошибка</h2>
+                    <p class="popup__text">Свяжитесь снами по телефону или напишите письмо на почту</p>
+                    <button class="popup__button popup__button_condition_active popup_type_error_button" type="button">Ок</button>
+                </div>
+                <figcaption class="popup__signature "></figcaption>
+            </figure>
+        </div>
         <!-- photo popup -->
         <div class="invisible popup popup_type_photo">
             <figure class="popup__border">
@@ -32,18 +60,21 @@
                 <button class="popup__exit" type="button">
                 <img class="popup__exit-img" src="../../../images/Close-Icon.svg" alt="закрыть">
             </button>
-                <form class="popup__content" action="send.php" method="post">
+                <form class="popup__content popup__form" enctype="multipart/form-data" method="post" id="form">
                     <h2 class="popup__title">Оставить Заявку</h2>
                     <div class="popup__box_name popup__box">
-                        <input type="text" class="popup__text popup__user-name" name="name" placeholder="Фамилия Имя Отчесвто" required>
+                        <input type="text" class="popup__text popup__user-name" id="user-name" name="name" placeholder="Фамилия Имя Отчество" required minlength="5" maxlength="40">
+                        <p class="user-name-error text-error invisible"></p>
                     </div>
                     <div class="popup__box_service popup__box">
-                        <input type="text" class="popup__text popup__user-service" name="service" placeholder="Услуга" required>
+                        <input type="text" class="popup__text popup__user-service" id="user-services" name="services" placeholder="Услуга" required minlength="5" maxlength="50">
+                        <p class="user-services-error text-error invisible"></p>
                     </div>
                     <div class="popup__box_telephone popup__box">
-                        <input type="text" class="popup__text popup__user-telephone" name="telephone" placeholder="Номер телефона" required>
+                        <input type="text" class="popup__text popup__user-telephone" id="user-phone" name="phone" placeholder="Номер телефона" minlength="11" maxlength="11" required>
+                        <p class="user-phone-error text-error invisible"></p>
                     </div>
-                    <button class="popup__button " type="submit">Отправить</button>
+                    <button class="popup__button popup__button_condition_active " id="popup__button_type_submit" type="submit">Отправить</button>
                 </form>
             </div>
         </div>
@@ -64,26 +95,29 @@
                         <img class="menu__exit" alt="закрыть" src="../../../images/exit.svg">
                         <ul class="menu__body">
                             <li>
-                                <a href="../../../index.html" class="menu__link" id="menu__link">Главная</a>
+                                <a href="../../../index.html" class="menu__link">Главная</a>
                             </li>
                             <li>
-                                <p class="menu__link menu__link-application" id="menu__link">Оставить заявку</p>
+                                <p class="menu__link menu__link-application">Оставить заявку</p>
                             </li>
 
                             <li>
-                                <a href="../../price/price.html" class="menu__link" id="menu__link">Услуги и Цены</a>
+                                <a href="../../price/price.html" class="menu__link">Услуги и Цены</a>
                             </li>
                             <li>
-                                <a href="../../works/works.html" class="menu__link" id="menu__link">Работы</a>
+                                <a href="../../works/works.html" class="menu__link">Работы</a>
                             </li>
                             <li>
-                                <a href="../../useful-information/useful-information.html" class="menu__link" id="menu__link">Полезная информация</a>
+                                <a href="../../useful-information/useful-information.html" class="menu__link">Полезная информация</a>
                             </li>
                             <li>
-                                <a href="../../about-me/about.html" class="menu__link" id="menu__link">О нас</a>
+                                <a href="../../about-me/about.html" class="menu__link">О нас</a>
                             </li>
                             <li>
-                                <a href="../../contacts/contacts.html" class="menu__link menu__link-type-contacts" id="menu__link">Контакты</a>
+                                <a href="../../reviews/reviews.html" class="menu__link">Отзывы</a>
+                            </li>
+                            <li>
+                                <a href="../../contacts/contacts.html" class="menu__link menu__link-type-contacts">Контакты</a>
                             </li>
 
                         </ul>
@@ -103,35 +137,34 @@
                 <ul class="article__section">
                     <li>
                         <h3 class="article__text-title">Температура и влажность воздуха</h3>
-                        <p class="article__subtitle"> Большая часть материалов, из которых сделано фортепиано, весьма гигроскопичны – в зависимости от влажности воздуха они могут деформироваться. Оптимальной температурой содержания инструмента являются 20°С, влажность – 45%. Если
-                            вы озабочены соблюдением этих параметров, то целесообразным будет приобретение специального гигрометра, который можно купить в любом магазине электроники.</p>
+                        <p class="article__subtitle"> Большая часть материалов, из которых сделано фортепиано, весьма гигроскопичны – в зависимости от влажности воздуха они могут деформироваться. Идеальной температурой содержания инструмента являются 20°С, влажность – 45%. Если вы
+                            озабочены соблюдением этих параметров, то целесообразным будет приобретение специального гигрометра, который можно купить в любом магазине электроники.</p>
                     </li>
                     <li>
-                        <h3 class="article__text-title">Куда лучше поставить пианино? </h3>
+                        <h3 class="article__text-title">Куда лучше поставить пианино?</h3>
                         <p class="article__subtitle">Оптимальное расстояние от фортепиано до отопительных приборов – 1,5 метра. Избегайте установки инструмента у дверей, окон и наружных стен. Этим вы обезопасите его от сквозняков и негативного влияния солнечных лучей. Любые изменения
-                            влажности воздуха (особенно резкие) сказываются на сроке службы вашего фортепиано. Инструмент должен стоять устойчиво Ножки (ролики) фортепиано должны быть прочно зафиксированы на полу. При необходимости можно воспользоваться
-                            дополнительными подставками. </p>
+                            влажности воздуха (особенно резкие) сказываются на сроке службы Вашего фортепиано. Инструмент должен стоять устойчиво. Ножки (ролики) фортепиано должны быть прочно зафиксированы на полу. При необходимости можно воспользоваться
+                            дополнительными подставками.</p>
                     </li>
                     <li>
                         <h3 class="article__text-title">Перевозка инструмента в холодное время года</h3>
-                        <p class="article__subtitle"> Если инструмент вам доставили в зимнее время года, необходимо свести к минимуму возможное влияние на него любых перепадов влажности и температуры. В течение суток лучше не открывать верхнюю и клавиатурную крышки. Это даст возможность
-                            механизму инструмента прогреться до комнатной температуры. Возможно, что поверхность фортепиано покроется конденсатом. Нужно дождаться пока он высохнет. Когда инструмент просохнет, протрите его сухой фланелевой или шерстяной
-                            тряпкой, уделив особое внимание металлическим деталям механизма.</p>
+                        <p class="article__subtitle">Если инструмент Вам доставили в зимнее время года, необходимо свести к минимуму возможное влияние на него любых перепадов влажности и температуры. В течение суток лучше не открывать верхнюю и клавиатурную крышки. Это даст возможность
+                            механизму инструмента прогреться до комнатной температуры. Возможно, поверхность фортепиано покроется конденсатом. В таком случае нужно дождаться, пока он полностью высохнет.</p>
                     </li>
                     <li>
                         <h3 class="article__text-title"> Настройка и регулировка механизма инструмента </h3>
-                        <p class="article__subtitle">Каким бы ни было фортепиано – новым или подержанным, после транспортировки оно нуждается в настройке и регулировке, которые, кстати говоря, нужно проводить регулярно, если вы хотите, чтобы инструмент прослужил вам как можно дольше.
-                            Для этого нужно приглашать только опытного мастера. Дилетантская настройка и регулировка фортепиано может привести к серьезным дефектам в его чувствительном механизме. В течение первого года после приобретения инструмента настраивать
-                            его нужно не менее двух раз, последующая регулировка работы механизма зависит от вашего желания, но она не должна осуществляться реже одного раза в год.
+                        <p class="article__subtitle">Каким бы ни было фортепиано – новым или подержанным, после транспортировки оно нуждается в настройке и регулировке, которые нужно проводить регулярно (раз в полгода, или раз в год) если вы хотите, чтобы инструмент прослужил Вам
+                            как можно дольше. В течение первого года после приобретения настраивать инструмент нужно не менее двух раз, последующая регулировка работы механизма зависит от Вашего желания, но она не должна осуществляться реже одного раза
+                            в год.</p>
                     </li>
                     <li>
                         <h3 class="article__text-title">Как чистить фортепиано?</h3>
-                        <p class="article__subtitle"> Для ухода за инструментом лучше всего использовать фланелевую или шерстяную ткань. Пользоваться лаками или спреями не стоит: если вы не разбираетесь в их свойствах, то вполне можете испортить и внешний вид фортепиано, и его механизм.
-                            От пыли пианино защитит специальный чехол. Чистить инструмент от загрязнения лучше с помощью пылесоса не реже раза в год. </p>
+                        <p class="article__subtitle">Для ухода за инструментом лучше всего использовать фланелевую или шерстяную ткань. Пользоваться лаками или спреями не стоит: если вы не разбираетесь в их свойствах, то вполне можете испортить и внешний вид фортепиано, и его механизм.
+                            От пыли пианино защитит специальный чехол. Чистить инструмент от загрязнения лучше с помощью пылесоса не реже раза в год</p>
                     </li>
                     <li>
                         <h3 class="article__text-title">Защита от насекомых</h3>
-                        <p class="article__subtitle"> Защитить фортепиано от насекомых помогут специальные составы в виде таблеток или порошков, которые нужно положить на дно инструмента.</p>
+                        <p class="article__subtitle">Защитить фортепиано от насекомых помогут специальные составы в виде таблеток или порошков, которые нужно положить на дно инструмента.</p>
                     </li>
                     <li>
                         <h3 class="article__text-title">P.S.</h3>
@@ -147,7 +180,7 @@
         <footer class="footer" id="footer">
 
             <div class="footer__text-box">
-                <h2 class="footer__title">Свяжитесь с Нами</h2>
+                <h2 class="footer__title">Свяжитесь с нами</h2>
                 <p class="footer__subtitle">Вы можете задать вопросы и заказать услуги<br>по телефону, почте или в наших соцсетях</p>
                 <p class="footer__author">&#169 Этюд Фортепианная Мастерская</p>
             </div>
@@ -156,7 +189,9 @@
                     <p class="footer__number">+79122120680</p>
                 </li>
                 <li class="footer__link-place">
-                    <p class="footer__mail">masterskayia-etud@yandex.ru</p>
+                    <a class="footer__mail" href="mailto:masterskayia-etud@yandex.ru?subject=Заявка на услуги фортепианной мастерской Этюд">
+                        masterskayia-etud@yandex.ru
+                    </a>
                 </li>
 
                 <li class="footer__link-place">

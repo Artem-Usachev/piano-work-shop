@@ -22,3 +22,9 @@
 .menu__link:active {
     background-size: 100% 1px;
 }
+
+@media screen and (max-width: 767px) {
+    .menu__link {
+        font-size: 20px;
+    }
+}

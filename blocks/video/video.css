@@ -7,3 +7,9 @@
         opacity: 1;
     }
 }
+
+@media screen and (max-width: 450px) {
+    .video__media {
+        opacity: 0;
+    }
+}

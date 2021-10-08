@@ -1,14 +1,8 @@
 .content__gallery {
     display: grid;
     margin: 50px auto;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(285px, 285px));
     column-gap: 15px;
     row-gap: 15px;
-}
-
-@media screen and (max-width: 676px) {
-    .content__gallery {
-        grid-template-columns: repeat(auto-fill, minmax(1fr, 1fr));
-        column-gap: 0;
-    }
+    justify-content: center;
 }

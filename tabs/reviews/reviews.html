@@ -7,7 +7,17 @@
     <meta name="format-detection" content="telephone=no">
     <title>Мастерская Этюд</title>
     <link rel="icon" href="../../images/site-icon.png" type="image/png">
-    <link rel="stylesheet" href="./pages/works.css">
+    <link rel="stylesheet" href="../price/pages/price.css">
+    <!-- Put this script tag to the <head> of your page -->
+    <!-- Put this script tag to the <head> of your page -->
+    <script type="text/javascript" src="https://vk.com/js/api/openapi.js?169"></script>
+
+    <script type="text/javascript">
+        VK.init({
+            apiId: 7936803,
+            onlyWidgets: true
+        });
+    </script>
 </head>
 
 <body class="body">
@@ -87,16 +97,6 @@
                         <img class="header__logo" src="../../images/logo.svg" alt="лого"></a>
                     <img class="header__nav" src="../../images/menu-icon.png" alt="меню">
                 </div>
-                <!-- галлерея -->
-                <div class=" invisible gallery">
-                    <div class="gallery__border">
-                        <section class="works works_type_keys">
-                        </section>
-                        <button class="popup__exit" type="button">
-                        <img class="popup__exit-img" src="../../images/Close-Icon.svg" alt="закрыть">
-                    </button>
-                    </div>
-                </div>
                 <!-- всплывающее меню -->
                 <nav class="invisible menu ">
 
@@ -114,7 +114,7 @@
                                 <a href="../price/price.html" class="menu__link">Услуги и Цены</a>
                             </li>
                             <li>
-                                <a href="./works.html" class="menu__link">Работы</a>
+                                <a href="../works/works.html" class="menu__link">Работы</a>
                             </li>
                             <li>
                                 <a href="../useful-information/useful-information.html" class="menu__link">Полезная информация</a>
@@ -123,7 +123,7 @@
                                 <a href="../about-me/about.html" class="menu__link">О нас</a>
                             </li>
                             <li>
-                                <a href="../reviews/reviews.html" class="menu__link">Отзывы</a>
+                                <a href="./reviews.html" class="menu__link">Отзывы</a>
                             </li>
                             <li>
                                 <a href="../contacts/contacts.html" class="menu__link menu__link-type-contacts">Контакты</a>
@@ -136,32 +136,22 @@
             </div>
         </header>
         <div class="content">
-
-            <div class="content__box">
-                <h1 class=" content__title">Работы</h1>
-                <p class="content__subtitle">В данном разделе Вам представлены примеры работ нашей мастерской. Ознакомиться с материалами можно, кликнув по названию вида работы.</p>
-            </div>
-            <div class="line"></div>
-            <!-- works -->
-
-            <ul class="content__li-box">
-                <li class="content__li-box-title"><a class="content__link " href="../gallery/keys/keys.html">
-                    Клавиатура
-                </a></li>
-                <li class="content__li-box-title"><a class="content__link " href="../gallery/transportation/transportation.html">Транспортировка</a></li>
-                <li class="content__li-box-title"><a class="content__link " href="../gallery/pegs/pegs.html">Колки</a></li>
-                <li class="content__li-box-title"><a class="content__link " href="../gallery/painting/painting.html">Покраска</a></li>
-                <li class="content__li-box-title"><a class="content__link " href="../gallery/mechanics/mechanics.html">Механика</a></li>
-                <li class="content__li-box-title"><a class="content__link " href="../gallery/cleaning/cleaning.html">Чистка</a></li>
-                <li class="content__li-box-title"><a class="content__link " href="../gallery/repair/repair.html">Ремонт</a></li>
-            </ul>
-            <div class="line"></div>
+            <h4 class="footer__title_revie"> Вы можете ознакомиться с отзывами по
+                <a class="content__link" href="https://vk.com/pavelpianotuning?w=app6326142_-154832188" target="_blank" rel="noopener">
+                ссылке</a> или оставить свой отзыв ниже</h2>
+                <!-- Put this div tag to the place, where the Comments block will be -->
+                <div id="vk_comments"></div>
+                <script type="text/javascript">
+                    VK.Widgets.Comments("vk_comments", {
+                        limit: 20,
+                        attach: "photo,video"
+                    });
+                </script>
         </div>
         <!-- подвал -->
-
+        <div class="line"></div>
 
         <footer class="footer" id="footer">
-
             <div class="footer__text-box">
                 <h2 class="footer__title">Свяжитесь с нами</h2>
                 <p class="footer__subtitle">Вы можете задать вопросы и заказать услуги<br>по телефону, почте или в наших соцсетях</p>
@@ -193,9 +183,8 @@
                 </li>
             </ul>
         </footer>
-
     </div>
-    <script type="module" src="./pages/works.js"></script>
+    <script type="module" src="../price/pages/price.js"></script>
 </body>
 
 </html>

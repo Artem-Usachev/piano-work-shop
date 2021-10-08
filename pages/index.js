@@ -1,7 +1,9 @@
 import { Menu } from "../components/Menu.js";
-import { Popup } from "../components/Popup.js";
 import { PopupWithForm } from "../components/PopupWithForm.js";
 import { PopupWithImage } from "../components/PopupWithImage.js";
+import { Popup } from "../components/Popup.js";
+import { FormValidator } from "../components/FormValidator.js";
+
 // preload
 window.onload = function() {
     document.body.classList.add("loaded_hiding");
@@ -11,6 +13,28 @@ window.onload = function() {
     }, 500);
 };
 
+// submit
+const congratulationPopup = new Popup(
+    document.querySelector(".popup_type_congratulation")
+);
+congratulationPopup.setEventListeners();
+const errorPopup = new Popup(document.querySelector(".popup_type_error"));
+errorPopup.setEventListeners();
+// validator
+
+const formValidationPopupForm = {
+    formSelector: ".popup__content",
+    inputSelector: ".popup__text",
+    submitButton: "popup__button_type_submit",
+    inputList: ".popup__text",
+    formPopup: ".popup__form",
+    activeButtonClass: "popup__button_condition_active",
+    errorClass: "popup__error",
+    invisibleClass: "invisible",
+    openClass: "open",
+};
+const formValidator = new FormValidator(formValidationPopupForm);
+formValidator.enableValidation();
 // scroll page
 const btnScrollDown = document.querySelector(".arrow-down");
 const windowCoords = document.documentElement.clientHeight;
@@ -78,43 +102,18 @@ window.addEventListener("scroll", () => {
 });
 const popupAplicationSelector = document.querySelector(".popup-application");
 const popupAplication = new PopupWithForm({ popup: popupAplicationSelector });
-popupAplication.setEventListeners()
+popupAplication.setEventListeners();
 const menuSelector = document.querySelector(".menu");
 const menuVisible = new Menu({
     selector: menuSelector,
-    clickEvent: () => popupAplication.open(),
+    clickEvent: () => {
+        popupAplication.open();
+        formValidator.resetErrors();
+    },
 });
 const openMenuBtn = document.querySelector(".header__nav");
 openMenuBtn.addEventListener("click", () => menuVisible.open());
 menuVisible.setEventListeners();
-// const popupRepairSelector = document.querySelector(".popup-repair");
-// // const popupRepair = new Popup(popupRepairSelector);
-// popupRepair.setEventListeners();
-// const openPopupRepairBtn = document.querySelector(".card-repair");
-// openPopupRepairBtn.addEventListener("click", () => popupRepair.open());
-// const popupSettingsSelector = document.querySelector(".popup-settings");
-// const popupTransportationSelector = document.querySelector(
-//   ".popup-transportation"
-// );
-// const popupDiagnosticsSelector = document.querySelector(".popup-diagnostics");
-// const popupSettings = new Popup(popupSettingsSelector);
-// const popupTransportation = new Popup(popupTransportationSelector);
-// const popupDiagnostics = new Popup(popupDiagnosticsSelector);
-// popupSettings.setEventListeners();
-// popupTransportation.setEventListeners();
-// popupDiagnostics.setEventListeners();
-// const openPopupSettingsBtn = document.querySelector(".card-settings");
-// const openPopupTransportationBtn = document.querySelector(
-//   ".card-transportation"
-// );
-// const openPopupDiagnosticsBtn = document.querySelector(".card-diagnostics");
-// openPopupSettingsBtn.addEventListener("click", () => popupSettings.open());
-// openPopupTransportationBtn.addEventListener("click", () =>
-//   popupTransportation.open()
-// );
-// openPopupDiagnosticsBtn.addEventListener("click", () =>
-//   popupDiagnostics.open()
-// );
 const popupPhotoSelector = document.querySelector(".popup_type_photo");
 const popupPhotoSignature = document.querySelector(".popup__signature");
 const popupPhotoImg = document.querySelector(".popup__illustration");
@@ -127,40 +126,21 @@ popupPhoto.setEventListeners();
 const workImg = document.querySelectorAll(".work__illustrasion");
 workImg.forEach((img) => {
     img.addEventListener("click", (e) => {
-        console.log(e);
         popupPhoto.open(e);
     });
 });
 const footerOpenPopuBtn = document.querySelector(".footer__title");
-footerOpenPopuBtn.addEventListener("click", () => popupAplication.open());
-// Отправка данных на сервер
-function send(event, php) {
-    console.log("Отправка запроса");
-    event.preventDefault ? event.preventDefault() : (event.returnValue = false);
-    var req = new XMLHttpRequest();
-    req.open("POST", php, true);
-    req.onload = function() {
-        if (req.status >= 200 && req.status < 400) {
-            json = JSON.parse(this.response); // Ебанный internet explorer 11
-            console.log(json);
-
-            // ЗДЕСЬ УКАЗЫВАЕМ ДЕЙСТВИЯ В СЛУЧАЕ УСПЕХА ИЛИ НЕУДАЧИ
-            if (json.result == "success") {
-                // Если сообщение отправлено
-                alert("Сообщение отправлено");
-            } else {
-                // Если произошла ошибка
-                alert("Ошибка. Сообщение не отправлено");
-            }
-            // Если не удалось связаться с php файлом
-        } else {
-            alert("Ошибка сервера. Номер: " + req.status);
-        }
-    };
-
-    // Если не удалось отправить запрос. Стоит блок на хостинге
-    req.onerror = function() {
-        alert("Ошибка отправки запроса");
-    };
-    req.send(new FormData(event.target));
-}
+footerOpenPopuBtn.addEventListener("click", () => {
+    formValidator.resetErrors();
+    popupAplication.open();
+});
+document
+    .querySelector(".popup_type_congratulation_button")
+    .addEventListener("click", () => {
+        congratulationPopup.close();
+    });
+document
+    .querySelector(".popup_type_error_button")
+    .addEventListener("click", () => {
+        errorPopup.close();
+    });

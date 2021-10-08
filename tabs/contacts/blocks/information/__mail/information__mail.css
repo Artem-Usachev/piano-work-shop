@@ -1,7 +1,17 @@
 .information__mail {
     color: #fdfdfd;
     text-decoration: none;
-    margin: 0;
+    margin-bottom: 30px;
     font-size: 26px;
-    padding-bottom: 30px;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 1px;
+    transition: background-size 2s;
+    cursor: pointer;
+}
+
+.information__mail:hover {
+    background-size: 100% 1px;
+    opacity: 0.8;
 }

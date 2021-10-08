@@ -3,6 +3,18 @@
     text-decoration: none;
     margin: 0;
     font-size: 26px;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 1px;
+    transition: background-size 2s;
+    cursor: pointer;
+    border-top: 1px solid red;
+}
+
+.footer__mail:hover {
+    background-size: 100% 1px;
+    opacity: 0.8;
 }
 
 @media screen and (max-width: 1439px) {

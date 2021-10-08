@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Матсерская Этюд</title>
-    <link rel="icon" href="../../images/site-icon.png" type="png">
+    <meta name="format-detection" content="telephone=no">
+    <title>Мастерская Этюд</title>
+    <link rel="icon" href="../../images/site-icon.png" type="image/png">
     <link rel="stylesheet" href="./pages/about.css">
 
 </head>
@@ -16,6 +17,33 @@
         <div class="preloader__item"></div>
     </div>
     <div class="page">
+        <!-- popup congratulation -->
+        <div class="invisible popup popup_type_congratulation">
+            <figure class="popup__border">
+                <button type="button " class="popup__exit">
+                    <img src="../../images/Close-Icon.svg" alt="закрыть " class="popup__exit-img ">
+                </button>
+                <div class="popup__content">
+                    <h2 class="popup__title">Заявка успешно отправлена, спасибо!</h2>
+                    <button class="popup__button popup__button_condition_active popup_type_congratulation_button" type="button">Ок</button>
+                </div>
+                <figcaption class="popup__signature "></figcaption>
+            </figure>
+        </div>
+        <!-- popup error -->
+        <div class="invisible popup popup_type_error">
+            <figure class="popup__border">
+                <button type="button " class="popup__exit">
+                    <img src="../../images/Close-Icon.svg" alt="закрыть " class="popup__exit-img ">
+                </button>
+                <div class="popup__content">
+                    <h2 class="popup__title">При отправке заявки произошла ошибка</h2>
+                    <p class="popup__text">Свяжитесь снами по телефону или напишите письмо на почту</p>
+                    <button class="popup__button popup__button_condition_active popup_type_error_button" type="button">Ок</button>
+                </div>
+                <figcaption class="popup__signature "></figcaption>
+            </figure>
+        </div>
         <!-- photo popup -->
         <div class="invisible popup popup_type_photo">
             <figure class="popup__border">
@@ -32,18 +60,21 @@
                 <button class="popup__exit" type="button">
                 <img class="popup__exit-img" src="../../images/Close-Icon.svg" alt="закрыть">
             </button>
-                <form class="popup__content" action="send.php" method="post">
+                <form class="popup__content popup__form" enctype="multipart/form-data" method="post" id="form">
                     <h2 class="popup__title">Оставить Заявку</h2>
                     <div class="popup__box_name popup__box">
-                        <input type="text" class="popup__text popup__user-name" name="name" placeholder="Фамилия Имя Отчесвто" required>
+                        <input type="text" class="popup__text popup__user-name" id="user-name" name="name" placeholder="Фамилия Имя Отчество" required minlength="5" maxlength="40">
+                        <p class="user-name-error text-error invisible"></p>
                     </div>
                     <div class="popup__box_service popup__box">
-                        <input type="text" class="popup__text popup__user-service" name="service" placeholder="Услуга" required>
+                        <input type="text" class="popup__text popup__user-service" id="user-services" name="services" placeholder="Услуга" required minlength="5" maxlength="50">
+                        <p class="user-services-error text-error invisible"></p>
                     </div>
                     <div class="popup__box_telephone popup__box">
-                        <input type="text" class="popup__text popup__user-telephone" name="telephone" placeholder="Номер телефона" required>
+                        <input type="text" class="popup__text popup__user-telephone" id="user-phone" name="phone" placeholder="Номер телефона" minlength="11" maxlength="11" required>
+                        <p class="user-phone-error text-error invisible"></p>
                     </div>
-                    <button class="popup__button " type="submit">Отправить</button>
+                    <button class="popup__button" id="popup__button_type_submit" disabled type="submit">Отправить</button>
                 </form>
             </div>
         </div>
@@ -64,26 +95,29 @@
                         <img class="menu__exit" alt="закрыть" src="../../images/exit.svg">
                         <ul class="menu__body">
                             <li>
-                                <a href="../../index.html" class="menu__link" id="menu__link">Главная</a>
+                                <a href="../../index.html" class="menu__link">Главная</a>
                             </li>
                             <li>
-                                <p class="menu__link menu__link-application" id="menu__link">Оставить заявку</p>
+                                <p class="menu__link menu__link-application">Оставить заявку</p>
                             </li>
 
                             <li>
-                                <a href="../price/price.html" class="menu__link" id="menu__link">Услуги и Цены</a>
+                                <a href="../price/price.html" class="menu__link">Услуги и Цены</a>
                             </li>
                             <li>
-                                <a href="../works/works.html" class="menu__link" id="menu__link">Работы</a>
+                                <a href="../works/works.html" class="menu__link">Работы</a>
                             </li>
                             <li>
-                                <a href="../useful-information/useful-information.html" class="menu__link" id="menu__link">Полезная информация</a>
+                                <a href="../useful-information/useful-information.html" class="menu__link">Полезная информация</a>
                             </li>
                             <li>
-                                <a href="./about.html" class="menu__link" id="menu__link">О нас</a>
+                                <a href="./about.html" class="menu__link">О нас</a>
                             </li>
                             <li>
-                                <a href="../contacts/contacts.html" class="menu__link menu__link-type-contacts" id="menu__link">Контакты</a>
+                                <a href="../reviews/reviews.html" class="menu__link">Отзывы</a>
+                            </li>
+                            <li>
+                                <a href="../contacts/contacts.html" class="menu__link menu__link-type-contacts">Контакты</a>
                             </li>
 
                         </ul>
@@ -104,25 +138,27 @@
             <div class="content__border">
                 <img class="content__img" src="../../images/pavel-photo.jpg">
                 <div class="content__text-box">
-                    <h3 class="content__title">мастер Павел Кручинский</h3>
-                    <p class="content__subtitle">Тут будет текст Тут будет текст Тут будет текст Тут будет текст Тут будет текст</p>
+                    <h3 class="content__title">Мастер Павел Кручинский</h3>
+                    <p class="content__subtitle">С 2012 году начал заниматься настройкой инструментов и мелким ремонтом на дому. </p>
+                    <p class="content__subtitle">В 2017 году официально подтвердил квалификацию в школе настройщиков. В этом же году была открыта мастерская по ремонту.</p>
+                    <p class="content__subtitle">Участвую в семинарах по ремонту, обслуживанию инструментов в Ассоциации фортепианных мастеров России. Постоянно повышаю уровень своих знаний и практической подготовки. </p>
                 </div>
             </div>
             <div class="line"></div>
             <h3 class="content__title content__title-about">Документы подтверждающие квалификацию :</h3>
             <div class="content__gallery">
-                <img class="content__illustration" src="../../images/documents/udostoverenie.jpg" alt="удостоверение настройщика">
-                <img class="content__illustration" src="../../images/documents/10.01-17.01.21.jpg" alt="диплом">
-                <img class="content__illustration" src="../../images/documents/11.04-18.04.21.jpg" alt="диплом">
-                <img class="content__illustration" src="../../images/documents/14-21.03.21.jpg" alt="диплом">
-                <img class="content__illustration" src="../../images/documents/14.02.21.jpg" alt="диплом">
-                <img class="content__illustration" src="../../images/documents/20200209_165129.jpg" alt="диплом">
-                <img class="content__illustration" src="../../images/documents/21.02.21.jpg" alt="диплом">
-                <img class="content__illustration" src="../../images/documents/24.01.21.jpg" alt="диплом">
-                <img class="content__illustration" src="../../images/documents/25.04.21.jpg" alt="диплом">
-                <img class="content__illustration" src="../../images/documents/28.02-07.03.21.jpg" alt="диплом">
-                <img class="content__illustration" src="../../images/documents/28.03.-04.04.21.jpg" alt="диплом">
-                <img class="content__illustration" src="../../images/documents/31.01-07.02.21.jpg" alt="диплом">
+                <img class="content__illustration" src="../../images/documents/udostoverenie.jpg" alt="Удостоверение настройщика фортепиано">
+                <img class="content__illustration" src="../../images/documents/10.01-17.01.21.jpg" alt="Сертификат о повышении квалификации">
+                <img class="content__illustration" src="../../images/documents/11.04-18.04.21.jpg" alt="Сертификат о повышении квалификации">
+                <img class="content__illustration" src="../../images/documents/14-21.03.21.jpg" alt="Сертификат о повышении квалификации">
+                <img class="content__illustration" src="../../images/documents/14.02.21.jpg" alt="Сертификат о повышении квалификации">
+                <img class="content__illustration" src="../../images/documents/20200209_165129.jpg" alt="Сертификат о повышении квалификации">
+                <img class="content__illustration" src="../../images/documents/21.02.21.jpg" alt="Сертификат о повышении квалификации">
+                <img class="content__illustration" src="../../images/documents/24.01.21.jpg" alt="Сертификат о повышении квалификации">
+                <img class="content__illustration" src="../../images/documents/25.04.21.jpg" alt="Сертификат о повышении квалификации">
+                <img class="content__illustration" src="../../images/documents/28.02-07.03.21.jpg" alt="Сертификат о повышении квалификации">
+                <img class="content__illustration" src="../../images/documents/28.03.-04.04.21.jpg" alt="Сертификат о повышении квалификации">
+                <img class="content__illustration" src="../../images/documents/31.01-07.02.21.jpg" alt="Сертификат о повышении квалификации">
 
             </div>
         </div>
@@ -131,7 +167,7 @@
         <footer class="footer-library" id="footer">
 
             <div class="footer__text-box">
-                <h2 class="footer__title">Свяжитесь с Нами</h2>
+                <h2 class="footer__title">Свяжитесь с нами</h2>
                 <p class="footer__subtitle">Вы можете задать вопросы и заказать услуги<br>по телефону, почте или в наших соцсетях</p>
                 <p class="footer__author">&#169 Этюд Фортепианная Мастерская</p>
             </div>
@@ -140,7 +176,9 @@
                     <p class="footer__number">+79122120680</p>
                 </li>
                 <li class="footer__link-place">
-                    <p class="footer__mail">masterskayia-etud@yandex.ru</p>
+                    <a class="footer__mail" href="mailto:masterskayia-etud@yandex.ru?subject=Заявка на услуги фортепианной мастерской Этюд">
+                        masterskayia-etud@yandex.ru
+                    </a>
                 </li>
 
                 <li class="footer__link-place">

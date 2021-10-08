@@ -23,6 +23,7 @@
 @import url(../blocks/popup/__error/popup__error.css);
 @import url(../blocks/popup/__button/_condition/popup__button_condition_active.css);
 @import url(../blocks/popup/__gallery/popup__gallery.css);
+@import url(../../useful-information/blocks/popup/__button/_condition/popup__button_condition_close.css);
 
 /* content */
 
@@ -110,3 +111,7 @@
 /* gallery */
 
 @import url(../blocks/gallery/gallery.css);
+
+/* text-error */
+
+@import url(../../../blocks/text-error/text-error.css);

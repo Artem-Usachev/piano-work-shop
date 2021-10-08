@@ -3,3 +3,7 @@
     border: none;
     color: #FFFFFF;
 }
+
+.popup__button_condition_active:hover {
+    cursor: pointer;
+}

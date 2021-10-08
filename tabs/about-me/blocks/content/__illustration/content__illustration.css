@@ -1,7 +1,7 @@
 .content__illustration {
-    max-width: 300px;
+  max-width: 285px;
 }
 
 .content__illustration:hover {
-    cursor: pointer;
+  cursor: pointer;
 }

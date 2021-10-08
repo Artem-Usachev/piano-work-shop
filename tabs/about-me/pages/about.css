@@ -17,6 +17,7 @@
 @import url(../../useful-information/blocks/popup/__text/popup__text.css);
 @import url(../../useful-information/blocks/popup/__title/popup__title.css);
 @import url(../../useful-information/blocks/popup/_type/popup_type_photo.css);
+@import url(../../useful-information/blocks/popup/__button/_condition/popup__button_condition_close.css);
 
 /* content */
 
@@ -88,3 +89,7 @@
 /* line */
 
 @import url(../../useful-information/blocks/line/line.css);
+
+/* text-error */
+
+@import url(../../../blocks/text-error/text-error.css);

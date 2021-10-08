@@ -17,6 +17,7 @@
 @import url(../blocks/popup/_type/popup_type_photo.css);
 @import url(../blocks/popup/__error/popup__error.css);
 @import url(../blocks/popup/__button/_condition/popup__button_condition_active.css);
+@import url(../../useful-information/blocks/popup/__button/_condition/popup__button_condition_close.css);
 
 /* content */
 
@@ -83,3 +84,7 @@
 @import url(../blocks/footer/footer.css);
 @import url(../blocks/footer/__line/footer__line.css);
 @import url(../blocks/footer/__author/footer__author.css);
+
+/* text-error */
+
+@import url(../../../blocks/text-error/text-error.css);
